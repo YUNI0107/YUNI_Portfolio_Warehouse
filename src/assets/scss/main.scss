@@ -1,0 +1,9 @@
+@mixin theme{
+    padding-top: 80px;
+    padding-left: 120px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+$dark_black: #393939;
+$gray: #707070;

@@ -1,0 +1,64 @@
+[
+    {
+        "short_name": "stir",
+        "id": 1,
+        "cate": "side",
+        "coperate": true,
+        "pic_num": 5,
+        "film": true,
+        "film_num": 2,
+        "award": true,
+        "award_type":[
+            "Young",
+            "A+"
+        ],
+        "skill":[
+            "Vue",
+            "Vue-i18n",
+            "Bootstrap5",
+            "Gsap",
+            "AOS"
+        ],
+        "web": "https://yuni0107.github.io/Scan_Your_Stir_Fries/#/",
+        "github": "https://github.com/YUNI0107/Scan_Your_Stir_Fries"
+    },
+    {
+        "short_name": "menu",
+        "id": 2,
+        "cate": "side",
+        "coperate": true,
+        "pic_num": 3,
+        "film": true,
+        "film_num": 2,
+        "award": true,
+        "award_type":[
+            "Young",
+            "A+"
+        ],
+        "skill":[
+            "Vue",
+            "html2canvas",
+            "File-saver",
+            "Js-zip"
+        ],
+        "web": "https://yuni0107.github.io/Scan_Your_Stir_Fries/#/menu_builder",
+        "github": "https://github.com/YUNI0107/Scan_Your_Stir_Fries"
+    },
+    {
+        "short_name": "bee",
+        "id": 3,
+        "cate": "side",
+        "coperate": true,
+        "pic_num": 4,
+        "film": false,
+        "award": false,
+        "skill":[   
+            "Nuxt",
+            "leaflet",
+            "vue2-leaflet",
+            "Gsap"
+        ],
+        "web": "https://yuni0107.github.io/Bee_Camp/#/",
+        "github": "https://github.com/YUNI0107/Bee_Camp"
+    }
+]

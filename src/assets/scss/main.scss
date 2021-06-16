@@ -1,9 +1,25 @@
 @mixin theme{
     padding-top: 80px;
-    padding-left: 120px;
+    padding-left: 100px;
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+@mixin ab_middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin  btn {
+    box-shadow: 2px 2px 5px rgba(182, 182, 182, .5), inset 5px 2px 5px rgb(245, 245, 245), inset 5px 10px 5px #fff, inset -2px -2px 5px rgba(182, 182, 182, 0.2);
 }
 
 $dark_black: #393939;
 $gray: #707070;
+$middle_gray: #393939;
+$main_blue: #5AF5F5;
+
+$back_gray: #FAFAFA;

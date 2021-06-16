@@ -1,0 +1,17 @@
+<div class="project_box">
+    <div class="cd">
+        <img class="w-100" src="../../assets/common/cd.png" alt="cd">
+    </div>
+    <div class="top">
+        <img v-if="item" :src="require(`../../assets/project/${item.short_name}/1.jpg`)" alt="project_img">
+    </div>
+    <div class="bottom">
+        <h1>來點熱炒 Scan Your Stir Fries </h1>
+        <div class="tool_list">
+            <div class="tool" v-for="skill in item.skill" :key="skill">{{ skill }}</div>
+        </div>
+        <p class="info_text">
+            {{ info_text }}
+        </p>
+    </div>
+</div>

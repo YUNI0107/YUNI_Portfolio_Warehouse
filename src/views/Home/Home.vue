@@ -1,13 +1,42 @@
 <script>
-import Nav from '@/components/Nav/Nav.vue'
+import Nav from "@/components/Nav/Nav.vue";
+import LittleBtn from "@/components/LittleBtn/LittleBtn.vue";
+import HomeSwiper from "@/components/HomeSwiper/HomeSwiper.vue";
+
+import axios from "axios";
 
 export default {
-  name: 'Home',
+  name: "Home",
+  data() {
+    return {
+      skill_list: [
+        { name: "vue", text: "Vue" },
+        { name: "nuxt", text: "Nuxt" },
+        { name: "boot", text: "Bootstrap5" },
+        { name: "git", text: "Git" },
+        { name: "js", text: "Javascript" },
+        { name: "css", text: "CSS3 Animation" },
+        { name: "gsap", text: "Gsap" },
+      ],
+      side_project: [],
+      small_project: [],
+      uiux_project: [],
+    };
+  },
   components: {
-    Nav
-  }
-}
+    Nav,
+    LittleBtn,
+    HomeSwiper,
+  },
+  mounted() {
+    axios.get("project.json").then((res) => {
+      this.side_project = res.data.filter((item) => item.cate == "side");
+      this.small_project = res.data.filter((item) => item.cate == "small");
+      this.uiux_project = res.data.filter((item) => item.cate == "uiux");
+    });
+  },
+};
 </script>
 
 <template src="./template.html"></template>
-<style src="./style.css" scoped></style>
+<style src="./style.scss" lang="scss" scoped></style>

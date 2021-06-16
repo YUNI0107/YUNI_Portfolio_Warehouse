@@ -15,6 +15,7 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
 
 *{
   margin: 0;
@@ -22,12 +23,18 @@ export default {
   box-sizing: border-box;
 }
 
+
 .w-100{
   width: 100%;
 }
 
+.h-100{
+  height: 100%;
+}
+
 p{
   font-size: 14px;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 
 </style>

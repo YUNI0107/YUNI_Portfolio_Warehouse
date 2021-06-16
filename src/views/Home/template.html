@@ -2,28 +2,51 @@
     <div class="banner_section">
         <div class="left">
             <div class="cd_section">
-
+                <div class="inside_cd"></div>
+                <div class="circlr_group">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="middle_cd">
+                    <div class="btn">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="text">
+                        <p>Playing</p>
+                        <div class="time">10:39:10</div>
+                    </div>
+                </div>
             </div>
             <div class="back">
-
+                <img src="../../assets/Home/water.jpeg">
             </div>
         </div>
         <div class="right">
             <div class="big_title">
                 <h1>YUNI ‘S</h1>
-                <h1>PORTFOLIO WAREHOUSE</h1>
-                <p><span>2021.</span>Chou Yun-Huei </p>
+                <h1>PORTFOLIO WAREHOUSE
+                    <span class="tag">
+                        <span>2021.</span>
+                        <span>Chou Yun-Huei</span>
+                    </span>
+                </h1>
             </div>
             <div class="hashtag_content">
                 <div class="hashtag">
                     <span class="hash">#</span>
-                    <h2>FrontEnd</h2>
-                    <span>前端開發</span>
+                    <div class="text">
+                        <h2>FrontEnd</h2>
+                        <span>前端開發</span>
+                    </div>
                 </div>
                 <div class="hashtag">
                     <span class="hash">#</span>
-                    <h2>Microinteractions</h2>
-                    <span>微互動</span>
+                    <div class="text">
+                        <h2>Microinteractions</h2>
+                        <span>微互動</span>
+                    </div>
                 </div>
             </div>
             <div class="intro_content">
@@ -32,9 +55,66 @@
                     <button>More About Me</button>
                 </div>
                 <div class="intro_text">
-                    您好，我是YUNI。專注於前端開發，喜歡研究各式的網頁效果，擁有很高的自我學習力與規劃能力，目前沈迷於接觸趨勢的發展，希望可以將能力應用在實務中。目前是Junior的開發者，作品集放置了許多近期製作的Side Project與各專案所應用的技術！
+                    <p>
+                        您好，我是YUNI。專注於前端開發，喜歡研究各式的網頁效果，擁有很高的自我學習力與規劃能力，目前沈迷於接觸趨勢的發展，希望可以將能力應用在實務中。目前是Junior的開發者，作品集放置了許多近期製作的Side
+                        Project與各專案所應用的技術！
+                    </p>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="control_section">
+        <div class="control_img">
+            <img class="w-100" src="../../assets/Home/control.png" alt="control">
+        </div>
+    </div>
+    <div class="about_section">
+        <div class="left">
+            <div class="pic">
+                <div class="pic_people">
+                    <img class="h-100" src="../../assets/Home/forest.jpg" alt="people">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="title">
+                <h2>ABOUT ME</h2>
+                <button>More About Me</button>
+            </div>
+            <div class="name">
+                <h2 class="ch_name">周芸卉</h2>
+                <h2 class="en_name">Chou Yun-Huei</h2>
+                <p class="birthday">1997 / 01 / 07</p>
+            </div>
+            <div class="exe">
+                <h3 class="exe_title">教育背景</h3>
+                <div class="date">
+                    <span>2019</span>
+                    <div class="line"></div>
+                    <span>2021</span>
+                    <h4 class="degree">碩士學位</h4>
+                </div>
+                <div class="exe_info">
+                    <p>國立臺北科技大學<span>互動設計系研究所</span> </p>
+                </div>
+                <div class="date">
+                    <span>2015</span>
+                    <div class="line"></div>
+                    <span>2019</span>
+                    <h4 class="degree">學士學位</h4>
+                </div>
+                <div class="exe_info">
+                    <p>國立臺灣藝術大學 <span>視覺傳達設計系</span> </p>
+                </div>
+                <div class="long_line"></div>
+                <h3 class="exe_title">技術與能力</h3>
+                <div class="skill_btn">
+                    <LittleBtn v-for="item in skill_list" :item="item" :key="item.name"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project_section">
+        <HomeSwiper/>
     </div>
 </div>

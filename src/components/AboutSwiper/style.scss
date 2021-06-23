@@ -1,0 +1,11 @@
+.about_swiper{
+    .swiper-slide{
+        height: 70px;
+        cursor: pointer;
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

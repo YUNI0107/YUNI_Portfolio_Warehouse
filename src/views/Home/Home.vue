@@ -2,6 +2,7 @@
 import Nav from "@/components/Nav/Nav.vue";
 import LittleBtn from "@/components/LittleBtn/LittleBtn.vue";
 import HomeSwiper from "@/components/HomeSwiper/HomeSwiper.vue";
+import FooterSection from "@/components/FooterSection/FooterSection.vue";
 
 import axios from "axios";
 
@@ -16,6 +17,7 @@ export default {
         { name: "git", text: "Git" },
         { name: "js", text: "Javascript" },
         { name: "css", text: "CSS3 Animation" },
+        { name: "sass", text: "Scss / Sass" },
         { name: "gsap", text: "Gsap" },
       ],
       side_project: [],
@@ -27,6 +29,7 @@ export default {
     Nav,
     LittleBtn,
     HomeSwiper,
+    FooterSection
   },
   mounted() {
     axios.get("project.json").then((res) => {

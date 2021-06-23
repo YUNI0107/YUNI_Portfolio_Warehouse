@@ -1,8 +1,22 @@
 @import "../../assets/scss/main.scss";
 .project_box{
     position: relative;
-    width: 400px;
+    width: 100%;
+    min-height: 320px;
+    background-color: #fff;
     box-shadow: 0px 0px 5px rgb(222, 222, 222);
+    transition: .5s;
+    &:hover{
+        transform: translateY(20px);
+        .cd{
+            top: -120px;
+        }
+        .top{
+            img{
+                opacity: 1;
+            }
+        }
+    }
     .cd{
         width: 280px;
         position: absolute;
@@ -10,19 +24,26 @@
         left: 50%;
         top: -80px;
         transform: translateX(-50%);
+        transition: .5s;
     }
     .top{
         position: relative;
         z-index: 2;
         width: 100%;
-        height: 200px;
+        height: 150px;
+        background-color: #fff;
+        overflow: hidden;
         img{
+            transition: .5s;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            opacity: .8;
         }
     }
     .bottom{
+        position: relative;
+        z-index: 2;
         background-color: #fff;
         padding: 15px 20px;
         h1{
@@ -40,6 +61,15 @@
             font-size: 12px;
             margin-right: 5px;
             margin-bottom: 5px;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .project_box{
+        .cd{
+            max-width: 280px;
+            width: 90%;
         }
     }
 }

@@ -1,0 +1,180 @@
+<div class="about">
+    <div class="about_content">
+        <div class="left">
+            <div class="left_content">
+                <div class="pic">
+                    <div class="pic_people">
+                        <img class="w-100 h-100" src="../../assets/About/people.jpg" alt="people">
+                        <div class="cd">
+                            <img class="w-100" src="../../assets/common/cd.png" alt="CD">
+                        </div>
+                    </div>
+                    <div class="name_content">
+                        <h1>ABOUT ME</h1>
+                        <div class="name">
+                            <h2 class="ch_name">周芸卉</h2>
+                            <h2 class="en_name">Chou Yun-Huei</h2>
+                        </div>
+                        <p class="birthday">1997 / 01 / 07</p>
+                    </div>
+                </div>
+                <div class="top_intro">
+                    <div class="middle_picture">
+                        <AboutSwiper />
+                    </div>
+                </div>
+                <div class="bottom_intro">
+                    <h2 class="about_title">PERSONALITY</h2>
+                    <div class="me_blocks">
+                        <p class="me_block" v-for="item in personality_list" :key="item">{{item}}</p>
+                    </div>
+                    <div class="detail">
+                        <p>您好！我是周芸卉，可以稱呼我為Yuni😊👋
+                            <br>如果要用一件事來代表我的話，一定是我對於喜愛事情有熱情的執著吧！我可以在假日的下午、下課後的晚上，一個人在電腦前敲敲打打一整天，怎麼樣也不會膩。<br><br>自我學習能力讓我可以學會解決問題。隨著合作經驗慢慢的累積，在團隊中我可以很好的整合跨領域技能。我喜歡充滿創造力的發想，喜歡溝通的激盪！也期待在未來也能夠繼續完成一個個精彩的專案。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="top_skill_intro">
+                <div class="hashtag">
+                    <span class="hash">#</span>
+                    <div class="text">
+                        <h2>FrontEnd</h2>
+                        <span>前端開發</span>
+                    </div>
+                </div>
+                <div class="skill_detail">
+                    <p>我擅長創造互動性高的動態效果網站，喜歡讓使用者為之一亮的小驚喜。目前致力於培養程式的邏輯與深入資料結構，已經可以讀懂大型Document，並且進行應用。我擁有很高的執行力，喜歡每月給自己學習的目標。
+                    </p>
+                </div>
+                <div class="skill_btns">
+                    <LittleBtn v-for="item in skill_list" :item="item" :key="item.name" />
+                    <div class="fam_link">
+                        <div class="icon">
+                            <img src="../../assets/About/fam.png" class="w-100">
+                        </div>
+                        <p>熟悉程度表 Familiarity</p>
+                    </div>
+                </div>
+                <div class="skill_now">
+                    <p>熟悉以<span class="bigger">AJAX</span>進行API的串接，平常習慣是以<span
+                            class="bigger">AXIOS</span>進行請求。會將他人的技術文章整理成書籤，也在遇到困難時將解決方法在HackMD上做紀錄。之後想開始寫技術性部落格，回饋自己從前輩身上得到的知識。
+                    </p>
+                </div>
+                <div class="skill_future">
+                    <h2>NEXT STEP</h2>
+                    <p>未來會逐漸轉換成使用<span class="bigger">Vue3</span>。未來希望可以透過學習<span
+                            class="bigger">Node.js</span>，用Express製作SSR的網站。</p>
+                </div>
+                <div class="hashtag hashtag_2">
+                    <span class="hash">#</span>
+                    <div class="text">
+                        <h2>Other Competencies</h2>
+                        <span>其他技能</span>
+                    </div>
+                </div>
+                <div class="skill_btns">
+                    <LittleBtn v-for="item in com_list" :item="item" :key="item.name" />
+                </div>
+            </div>
+            <div class="middle_line"></div>
+            <div class="bottom">
+                <div class="edu_section">
+                    <h2 class="about_title">EDUCATION</h2>
+                    <div class="school">
+                        <div class="date">
+                            <span>2019</span>
+                            <div class="line"></div>
+                            <span>2021</span>
+                            <h4 class="degree">碩士學位</h4>
+                        </div>
+                        <div class="exe_info">
+                            <p>國立臺北科技大學<span>互動設計系研究所</span> </p>
+                        </div>
+                    </div>
+                    <div class="school">
+                        <div class="date">
+                            <span>2015</span>
+                            <div class="line"></div>
+                            <span>2019</span>
+                            <h4 class="degree">學士學位</h4>
+                        </div>
+                        <div class="exe_info">
+                            <p>國立臺灣藝術大學 <span>視覺傳達設計系</span> </p>
+                        </div>
+                    </div>
+                    <div class="toeic">
+                        <div class="icon_img">
+                            <img src="../../assets/About/toeic.png" class="w-100">
+                        </div>
+                        <p>2021 English / TOEIC Reading & Listening <span>900</span> </p>
+                    </div>
+                </div>
+                <div class="exe_section">
+                    <h2 class="about_title">EXPERIENCE</h2>
+                    <div class="each_exe">
+                        <div class="date">
+                            <span>2015</span>
+                            <div class="line"></div>
+                            <span>2019</span>
+                        </div>
+                        <p class="exe_name">北科大互動所 使用者經驗與介面設計實驗室 &nbsp&nbsp<span>研究助理 </span></p>
+                        <p class="info">北科大實習系統設計、國立公共資訊圖書館兒童尋書APP</p>
+                    </div>
+                    <div class="each_exe">
+                        <div class="date">
+                            <span>2020</span>
+                            <span>October</span>
+                        </div>
+                        <p class="exe_name">TAICHI 2020 &nbsp&nbsp<span> Visual Designer Agenda Programer </span></p>
+                        <p class="info">Taiwanese association of Computer-Human Interaction annual conference</p>
+                    </div>
+                    <div class="each_exe">
+                        <div class="date">
+                            <span>2020</span>
+                            <span>October</span>
+                        </div>
+                        <div class="each_block">
+                            <div class="icon">
+                                <img src="../../assets/About/wild.png" class="w-100">
+                            </div>
+                            <div class="each_text">
+                                <p class="exe_name">放視大賞 - 行動軟體應用企劃組&nbsp&nbsp<span>金獎</span></p>
+                                <p class="info"><a href="#">隨拍隨得</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="each_exe">
+                        <div class="date">
+                            <span>2019</span>
+                            <span>October</span>
+                        </div>
+                        <div class="each_block">
+                            <div class="icon">
+                                <img src="../../assets/About/young.jpeg" class="w-100">
+                            </div>
+                            <div class="each_text">
+                                <p class="exe_name">金點新秀設計獎<span>數位多媒體類 </span></p>
+                                <p class="info"><a href="#">來點熱炒</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="each_exe">
+                        <div class="date">
+                            <span>2017</span>
+                            <div class="line"></div>
+                            <span>2018</span>
+                        </div>
+                        <p class="exe_name">104級 台藝大視覺傳達設計學系<span>系學會 會長</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="3D_people">
+        <img src="" alt="">
+    </div>
+    <FooterSection />
+</div>

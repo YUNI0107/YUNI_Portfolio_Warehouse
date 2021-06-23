@@ -1,5 +1,32 @@
 <div class="home">
     <div class="banner_section">
+        <div class="top_section mobile">
+            <div class="big_title">
+                <h1>YUNI ‘S</h1>
+                <h1>PORTFOLIO WAREHOUSE
+                    <span class="tag">
+                        <span>2021.</span>
+                        <span>Chou Yun-Huei</span>
+                    </span>
+                </h1>
+            </div>
+            <div class="hashtag_content">
+                <div class="hashtag">
+                    <span class="hash">#</span>
+                    <div class="text">
+                        <h2>FrontEnd</h2>
+                        <span>前端開發</span>
+                    </div>
+                </div>
+                <div class="hashtag">
+                    <span class="hash">#</span>
+                    <div class="text">
+                        <h2>Microinteractions</h2>
+                        <span>微互動</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="left">
             <div class="cd_section">
                 <div class="inside_cd"></div>
@@ -24,28 +51,32 @@
             </div>
         </div>
         <div class="right">
-            <div class="big_title">
-                <h1>YUNI ‘S</h1>
-                <h1>PORTFOLIO WAREHOUSE
-                    <span class="tag">
-                        <span>2021.</span>
-                        <span>Chou Yun-Huei</span>
-                    </span>
-                </h1>
-            </div>
-            <div class="hashtag_content">
-                <div class="hashtag">
-                    <span class="hash">#</span>
-                    <div class="text">
-                        <h2>FrontEnd</h2>
-                        <span>前端開發</span>
-                    </div>
+            <div class="title_hold mobile_none">
+                <div class="big_title">
+                    <h1>YUNI ‘S</h1>
+                    <h1>PORTFOLIO WAREHOUSE
+                        <span class="tag">
+                            <span>2021.</span>
+                            <span>Chou Yun-Huei</span>
+                        </span>
+                    </h1>
                 </div>
-                <div class="hashtag">
-                    <span class="hash">#</span>
-                    <div class="text">
-                        <h2>Microinteractions</h2>
-                        <span>微互動</span>
+            </div>
+            <div class="hash_hold mobile_none">
+                <div class="hashtag_content">
+                    <div class="hashtag">
+                        <span class="hash">#</span>
+                        <div class="text">
+                            <h2>FrontEnd</h2>
+                            <span>前端開發</span>
+                        </div>
+                    </div>
+                    <div class="hashtag">
+                        <span class="hash">#</span>
+                        <div class="text">
+                            <h2>Microinteractions</h2>
+                            <span>微互動</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,7 +103,7 @@
         <div class="left">
             <div class="pic">
                 <div class="pic_people">
-                    <img class="h-100" src="../../assets/Home/forest.jpg" alt="people">
+                    <img src="../../assets/Home/forest.jpg" alt="people">
                 </div>
             </div>
         </div>
@@ -88,33 +119,56 @@
             </div>
             <div class="exe">
                 <h3 class="exe_title">教育背景</h3>
-                <div class="date">
-                    <span>2019</span>
-                    <div class="line"></div>
-                    <span>2021</span>
-                    <h4 class="degree">碩士學位</h4>
+                <div class="school">
+                    <div class="date">
+                        <span>2019</span>
+                        <div class="line"></div>
+                        <span>2021</span>
+                        <h4 class="degree">碩士學位</h4>
+                    </div>
+                    <div class="exe_info">
+                        <p>國立臺北科技大學<span>互動設計系研究所</span> </p>
+                    </div>
                 </div>
-                <div class="exe_info">
-                    <p>國立臺北科技大學<span>互動設計系研究所</span> </p>
-                </div>
-                <div class="date">
-                    <span>2015</span>
-                    <div class="line"></div>
-                    <span>2019</span>
-                    <h4 class="degree">學士學位</h4>
-                </div>
-                <div class="exe_info">
-                    <p>國立臺灣藝術大學 <span>視覺傳達設計系</span> </p>
+                <div class="school">
+                    <div class="date">
+                        <span>2015</span>
+                        <div class="line"></div>
+                        <span>2019</span>
+                        <h4 class="degree">學士學位</h4>
+                    </div>
+                    <div class="exe_info">
+                        <p>國立臺灣藝術大學 <span>視覺傳達設計系</span> </p>
+                    </div>
                 </div>
                 <div class="long_line"></div>
                 <h3 class="exe_title">技術與能力</h3>
                 <div class="skill_btn">
-                    <LittleBtn v-for="item in skill_list" :item="item" :key="item.name"/>
+                    <LittleBtn v-for="item in skill_list" :item="item" :key="item.name" />
                 </div>
             </div>
         </div>
     </div>
-    <div class="project_section">
-        <HomeSwiper/>
+    <div class="project_section side_project">
+        <HomeSwiper :project="side_project" />
+        <div class="title">
+            <h1>WEB SIDE PROJECT</h1>
+            <p>專案結合完整功能與多樣技術</p>
+        </div>
     </div>
+    <div class="project_section small_project">
+        <HomeSwiper :project="small_project" />
+        <div class="title">
+            <h1>WEB SMALL PROJECT</h1>
+            <p>有趣與快速練習的小網頁</p>
+        </div>
+    </div>
+    <div class="project_section uiux_project">
+        <HomeSwiper :project="uiux_project" />
+        <div class="title">
+            <h1>UI / UX PROJECT</h1>
+            <p>負責介面設計與使用者經驗</p>
+        </div>
+    </div>
+    <FooterSection />
 </div>

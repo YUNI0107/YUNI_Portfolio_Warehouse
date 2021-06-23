@@ -1,64 +1,134 @@
 [
-    {
-        "short_name": "stir",
-        "id": 1,
-        "cate": "side",
-        "coperate": true,
-        "pic_num": 5,
-        "film": true,
-        "film_num": 2,
-        "award": true,
-        "award_type":[
-            "Young",
-            "A+"
-        ],
-        "skill":[
-            "Vue",
-            "Vue-i18n",
-            "Bootstrap5",
-            "Gsap",
-            "AOS"
-        ],
-        "web": "https://yuni0107.github.io/Scan_Your_Stir_Fries/#/",
-        "github": "https://github.com/YUNI0107/Scan_Your_Stir_Fries"
-    },
-    {
-        "short_name": "menu",
-        "id": 2,
-        "cate": "side",
-        "coperate": true,
-        "pic_num": 3,
-        "film": true,
-        "film_num": 2,
-        "award": true,
-        "award_type":[
-            "Young",
-            "A+"
-        ],
-        "skill":[
-            "Vue",
-            "html2canvas",
-            "File-saver",
-            "Js-zip"
-        ],
-        "web": "https://yuni0107.github.io/Scan_Your_Stir_Fries/#/menu_builder",
-        "github": "https://github.com/YUNI0107/Scan_Your_Stir_Fries"
-    },
-    {
-        "short_name": "bee",
-        "id": 3,
-        "cate": "side",
-        "coperate": true,
-        "pic_num": 4,
-        "film": false,
-        "award": false,
-        "skill":[   
-            "Nuxt",
-            "leaflet",
-            "vue2-leaflet",
-            "Gsap"
-        ],
-        "web": "https://yuni0107.github.io/Bee_Camp/#/",
-        "github": "https://github.com/YUNI0107/Bee_Camp"
-    }
+  {
+    "short_name": "stir",
+    "id": 1,
+    "cate": "side",
+    "coperate": true,
+    "pic_num": 5,
+    "film": true,
+    "film_num": 2,
+    "award": true,
+    "award_type": ["Young", "A+"],
+    "skill": ["Vue", "Vue-i18n", "Bootstrap5", "Gsap", "AOS"],
+    "web": "https://yuni0107.github.io/Scan_Your_Stir_Fries/#/",
+    "github": "https://github.com/YUNI0107/Scan_Your_Stir_Fries"
+  },
+  {
+    "short_name": "menu",
+    "id": 2,
+    "cate": "side",
+    "coperate": true,
+    "pic_num": 3,
+    "film": true,
+    "film_num": 2,
+    "award": true,
+    "award_type": ["Young", "A+"],
+    "skill": ["Vue", "html2canvas", "File-saver", "Js-zip"],
+    "web": "https://yuni0107.github.io/Scan_Your_Stir_Fries/#/menu_builder",
+    "github": "https://github.com/YUNI0107/Scan_Your_Stir_Fries"
+  },
+  {
+    "short_name": "bee",
+    "id": 3,
+    "cate": "side",
+    "coperate": true,
+    "pic_num": 4,
+    "film": false,
+    "award": false,
+    "skill": ["Nuxt", "leaflet", "vue2-leaflet", "Gsap"],
+    "web": "https://yuni0107.github.io/Bee_Camp/#/",
+    "github": "https://github.com/YUNI0107/Bee_Camp"
+  },
+  {
+    "short_name": "ball",
+    "id": 4,
+    "cate": "side",
+    "coperate": false,
+    "pic_num": 5,
+    "film": false,
+    "award": false,
+    "skill": ["Vue", "Google Map", "Gsap", "D3.js", "Swiper", "News API"],
+    "web": "https://yuni0107.github.io/Play_Ball_Game/#/",
+    "github": "https://github.com/YUNI0107/Play_Ball_Game"
+  },
+  {
+    "short_name": "tomato",
+    "id": 5,
+    "cate": "small",
+    "coperate": false,
+    "pic_num": 2,
+    "film": false,
+    "award": false,
+    "skill": ["Vue", "PIXI.js", "YouTube API"],
+    "web": "https://yuni0107.github.io/tomato_music_clock/",
+    "github": "https://github.com/YUNI0107/tomato_music_clock"
+  },
+  {
+    "short_name": "taichi",
+    "id": 6,
+    "cate": "small",
+    "coperate": false,
+    "pic_num": 2,
+    "film": false,
+    "award": false,
+    "skill": ["Vue", "Gsap"],
+    "web": "https://yuni0107.github.io/taichi2020/#/paper",
+    "github": "https://github.com/YUNI0107/taichi2020"
+  },
+  {
+    "short_name": "kal",
+    "id": 7,
+    "cate": "small",
+    "coperate": false,
+    "pic_num": 2,
+    "film": false,
+    "award": false,
+    "skill": ["Vue", "Gsap"],
+    "web": "https://yuni0107.github.io/kac_tool/",
+    "github": "https://github.com/YUNI0107/kac_tool"
+  },
+  {
+    "short_name": "book",
+    "id": 8,
+    "cate": "uiux",
+    "coperate": true,
+    "pic_num": 4,
+    "film": true,
+    "film_num": 2,
+    "award": false,
+    "skill": ["System flow", "User experience", "User interface"],
+    "award_type": ["library"]
+  },
+  {
+    "short_name": "intern",
+    "id": 9,
+    "cate": "uiux",
+    "coperate": true,
+    "pic_num": 4,
+    "film": false,
+    "award": false,
+    "skill": ["System flow", "User experience", "User interface"]
+  },
+  {
+    "short_name": "snake",
+    "id": 10,
+    "cate": "uiux",
+    "coperate": true,
+    "pic_num": 4,
+    "film": true,
+    "film_num": 1,
+    "award": true,
+    "skill": ["User interface","Design Thinking","Motion Graphic"],
+    "award_type": ["fun"]
+  },
+  {
+    "short_name": "mvp",
+    "id": 11,
+    "cate": "uiux",
+    "coperate": true,
+    "pic_num": 3,
+    "film": false,
+    "award": false,
+    "skill": ["User interface", "User research"]
+  }
 ]

@@ -3,16 +3,12 @@
         <div class="left">
             <div class="page_info">
                 <div class="nav_icon">
-                    <img class="w-100" src="../../assets/Nav/home_icon.png" alt="icon">
+                    <img class="w-100" :src="require(`../../assets/Nav/${location}_icon.png`)" alt="icon">
                 </div>
-                <p>Home</p>
-                <div class="color">
-                    <div class="color_block"></div>
-                    <div class="color_block"></div>
-                </div>
+                <p>{{location_text}}</p>
             </div>
-            <div class="toggle">
-                <div class="toggle_icon">
+            <div class="toggle" @click="toggleNav">
+                <div class="toggle_icon" :class="{'close': nav_open}">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -48,5 +44,76 @@
         </div>
     </div>
     <div class="middle_part">
+        <div class="scroll_part">
+            <div class="first_section">
+                <div class="top">
+                    <div class="title">
+                        <h1>PORTFOLIO WAREHOUSE</h1>
+                        <h2><span>2021. Chou Yun-Huei</span></h2>
+                    </div>
+                    <div class="links">
+                        <router-link :to="{name: 'home'}" >
+                            <div class="link_block" @mouseenter="mainPicChange(1)" @click="routeChange(1)">
+                                <p>首頁</p>
+                                <div class="icon" :class="{'active': location == 'home'}">
+                                    <img src="../../assets/Nav/home_icon.png" class="w-100" alt="home">
+                                </div>
+                            </div>
+                        </router-link>
+                        <router-link :to="{name: 'project'}" >
+                            <div class="link_block" @mouseover="mainPicChange(2)" @click="routeChange(2)">
+                                <p>所有專案</p>
+                                <div class="icon" :class="{'active': location == 'project'}">
+                                    <img src="../../assets/Nav/project_icon.png" class="w-100" alt="project">
+                                </div>
+                            </div>
+                        </router-link>
+                        <router-link :to="{name: 'about'}">
+                            <div class="link_block" @mouseover="mainPicChange(3)" @click="routeChange(3)">
+                                <p>關於我</p>
+                                <div class="icon" :class="{'active': location == 'about'}">
+                                    <img src="../../assets/Nav/about_icon.png" class="w-100" alt="about">
+                                </div>
+                            </div>
+                        </router-link>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="lang">
+                        <p>Language : English</p>
+                    </div>
+                    <div class="contacts">
+                        <div class="contact_block">
+                            <div class="icon">
+                                <img class="w-100" src="../../assets/Nav/github.png" alt="github">
+                            </div>
+                            <p>Mail</p>
+                        </div>
+                        <div class="contact_block">
+                            <div class="icon">
+                                <img class="w-100" src="../../assets/Nav/mail.png" alt="mail">
+                            </div>
+                            <p>Git-Hub</p>
+                        </div>
+                        <div class="little_pic">
+                            <img src="../../assets/Nav/logo.png" alt="logo" class="w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="second_section">
+                <div class="second_content">
+                    <div class="main_pic">
+                            <img v-show="current_pic == 1" src="../../assets/Nav/home_pic.jpeg">
+                            <img v-show="current_pic == 2" src="../../assets/Nav/project_pic.jpeg">
+                            <img v-show="current_pic == 3" src="../../assets/Nav/about_pic.jpeg">
+                    </div>
+                    <div class="intro_text">
+                        <h1><span>#1</span>Home</h1>
+                        <p>從首頁可快速了解作者的專業能力與背景，並展現網頁動態的程式能力，由風格展現個人特質。可從首頁挑選有興趣的專案進行瀏覽。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

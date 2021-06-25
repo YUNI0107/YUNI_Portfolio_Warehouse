@@ -1,0 +1,99 @@
+@import "../../assets/scss/main.scss";
+.project_box{
+    position: relative;
+    width: 100%;
+    min-height: 320px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgb(222, 222, 222);
+    transition: .5s;
+    &:hover{
+        transform: translateY(20px);
+        .cd{
+            top: -120px;
+        }
+        .top{
+            img{
+                opacity: 1;
+            }
+        }
+    }
+    .cd{
+        max-width: 280px;
+        width: 90%;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: -80px;
+        transform: translateX(-50%);
+        transition: .5s;
+    }
+    .top{
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 150px;
+        background-color: #fff;
+        overflow: hidden;
+        img{
+            transition: .5s;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .8;
+        }
+    }
+    .bottom{
+        position: relative;
+        z-index: 2;
+        background-color: #fff;
+        padding: 15px 20px;
+        h1{
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+    }
+    .tool_list{
+        margin-bottom: 5px;
+        .tool{
+            display: inline-block;
+            padding: 2px 20px;
+            background-color: $middle_gray;
+            color: #fff;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .project_box{
+        min-height: 280px;
+        &:hover{
+            transform: translateY(0px);
+        }
+        .cd{
+            display: none;
+        }
+        .top{
+            height: 25vw;
+            img{
+                opacity: 1;
+            }
+        }
+        .bottom{
+            padding: 15px 10px;
+            h1{
+                font-size: 18px;
+            }
+            p{
+                font-size: 10px;
+            }
+        }
+        .tool_list{
+            .tool{
+                padding: 2px 10px;
+            }
+        }
+    }
+}

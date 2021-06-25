@@ -32,7 +32,7 @@ export default {
     FooterSection
   },
   mounted() {
-    axios.get("project.json").then((res) => {
+    axios.get("project_simple.json").then((res) => {
       this.side_project = res.data.filter((item) => item.cate == "side");
       this.small_project = res.data.filter((item) => item.cate == "small");
       this.uiux_project = res.data.filter((item) => item.cate == "uiux");

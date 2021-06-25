@@ -6,9 +6,9 @@
         <img v-if="item" :src="require(`../../assets/project/${item.short_name}/small.jpg`)" alt="project_img">
     </div>
     <div class="bottom">
-        <h1>來點熱炒 Scan Your Stir Fries </h1>
+        <h1>來點熱炒 </h1>
         <div class="tool_list">
-            <div class="tool" v-for="skill in item.skill" :key="skill">{{ skill }}</div>
+            <div class="tool" v-for="skill in skill_list" :key="skill">{{ skill }}</div>
         </div>
         <p class="info_text">
             {{ info_text }}

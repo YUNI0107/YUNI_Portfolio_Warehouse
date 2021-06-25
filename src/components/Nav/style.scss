@@ -119,6 +119,9 @@
       .top_content {
         display: flex;
         align-items: center;
+        a{
+          text-decoration: none;
+        }
         .links {
           display: flex;
           .link_block {
@@ -181,7 +184,6 @@
     min-height: 100vh;
     margin-left: 100px;
     width: calc(100vw - 100px);
-    transition: .5s;
     z-index: 1;
     .scroll_part {
       min-height: 100vh;
@@ -295,6 +297,9 @@
         .contacts {
           display: flex;
           align-items: center;
+          a{
+            text-decoration: none;
+          }
           .contact_block {
             cursor: pointer;
             margin-right: 40px;
@@ -329,7 +334,6 @@
       padding: 30px 20px;
       width: 60%;
       background-color: #fff;
-      transition: .5s;
       position: relative;
       z-index: 1;
       .second_content {

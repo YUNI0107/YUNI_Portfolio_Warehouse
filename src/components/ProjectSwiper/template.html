@@ -1,0 +1,29 @@
+<div class="project_swiper" v-if="project">
+    <div
+    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+    class="swiper-container mySwiper2"
+  >
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" v-for="item in project.pic_num">
+        <img :src="require(`../../assets/project/${project.short_name}/${item}.jpg`)"/>
+      </div>
+    </div>
+    <div class="swiper-button-next toggle_btn">
+        <div class="icon">
+            <img src="../../assets/ProjectIntro/toggle_icon.png" alt="toggle" class="w-100">
+        </div>
+    </div>
+    <div class="swiper-button-prev toggle_btn">
+        <div class="icon">
+            <img src="../../assets/ProjectIntro/toggle_icon.png" alt="toggle" class="w-100">
+        </div>
+    </div>
+  </div>
+  <div thumbsSlider="" class="swiper-container mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="item in project.pic_num">
+            <img :src="require(`../../assets/project/${project.short_name}/${item}.jpg`)"/>
+          </div>
+    </div>
+  </div>
+</div>

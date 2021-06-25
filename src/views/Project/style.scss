@@ -1,0 +1,226 @@
+@import "../../assets/scss/main.scss";
+.project{
+    position: relative;
+    z-index: 2000;
+    .top_nav{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+        a{
+            color: black;
+            text-decoration: none;
+            p{
+                font-size: 16px;
+            }
+            span{
+                margin-right: 10px;
+            }
+            &:hover{
+                opacity: .7;
+            }
+        }
+        a.dark{
+            color: #fff;
+        }
+        .toggle_btn{
+            height: 70px;
+            display: flex;
+            align-items: center;
+            .btn{
+                position: relative;
+                z-index: 1;
+                box-shadow: 0px 0px 5px rgba(94, 94, 94, 0.1);
+                height: 100%;
+                background-color: $back_gray;
+                padding: 20px;
+                cursor: pointer;
+                .icon{
+                    width: 30px;
+                }
+                &:hover{
+                    background-color: rgb(238, 238, 238);
+                }
+            }
+            .btn.minus{
+                border-radius: 50% 0 0 50%;
+                border: solid 1px #d0d0d0;
+            }
+            .btn.plus{
+                border-radius: 0 50% 50% 0;
+                border: solid 1px #d0d0d0;
+            }
+            .middle{
+                position: relative;
+                z-index: 2;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 20px;
+                text-align: center;
+                background-color: $back_gray;
+                border-top: solid 1px #d0d0d0;
+                border-bottom: solid 1px #d0d0d0;
+                h2{
+                    font-size: 30px;
+                    margin-top: 5px;
+                    letter-spacing: 2px;
+                }
+                p{
+                    color: $gray;
+                    margin-top: -5px;
+                }
+            }
+        }
+    }
+    .content_section{
+        background-color: #fff;
+        padding: 40px 40px;
+        min-height: calc(100vh - 100px);
+        display: flex;
+        .left{
+            flex: 3;
+            padding-right: 30px;
+            .swiper_section{
+                width: 100%;
+                max-width: calc((100vw - 80px) * 0.6);
+            }
+            .title_section{
+                display: flex;
+                align-items: flex-end;
+                margin-top: 50px;
+                flex-wrap: wrap;
+                .text{
+                    margin-right: 30px;
+                    display: flex;
+                    align-items: center;
+                    h2{
+                        font-size: 50px;
+                        margin-right: 20px;
+                        span{
+                            margin-right: 10px;
+                        }
+                    }
+                    .title{
+                        margin-bottom: 5px;
+                        h1{
+                            font-size: 35px;
+                        }
+                    }
+                }
+                .links_section{
+                    display: flex;
+                    align-items: flex-end;
+                    flex-wrap: wrap;
+                    .web_link{
+                        display: flex;
+                        margin-top: 10px;
+                        height: 40px;
+                        align-items: center;
+                        background-color: $back_gray;
+                        border: solid 1px rgb(222, 222, 222);
+                        box-shadow: inset 1px 1px 5px #fff,inset -2px -2px 5px rgba(206, 206, 206, 0.164), 0px 2px 5px rgb(225, 225, 225);
+                        padding: 10px 20px;
+                        border-radius: 50px;
+                        &:hover{
+                            background-color: #eeeeee;
+                        }
+                        p{
+                            margin-right: 8px;
+                            font-size: 16px;
+                        }
+                        .icon{
+                            height: 18px;
+                        }
+                    }
+                    .github_link{
+                        margin-top: 10px;
+                        margin-right: 10px;
+                        background-color: $back_gray;
+                        border: solid 1px rgb(222, 222, 222);
+                        box-shadow: inset 1px 1px 5px #fff,inset -2px -2px 5px rgba(206, 206, 206, 0.164), 0px 2px 5px rgb(225, 225, 225);
+                        border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        padding: 5px;
+                        &:hover{
+                            background-color: #eeeeee;
+                        }
+                        .icon{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .right{
+            flex: 2;
+            .each_intro{
+                margin-bottom: 20px;
+                p{
+                    display: inline-block;
+                }
+                .intro_title{
+                    font-weight: bolder;
+                    margin-right: 10px;
+                    margin-bottom: 5px;
+                }
+                ul{
+                    margin-left: 20px;
+                    li{
+                        font-size: 14px;
+                        line-height: 25px;
+                    }
+                }
+                .tool_list{
+                    .tool_block{
+                        display: inline-block;
+                        padding: 5px 10px;
+                        color: #fff;
+                        font-weight: bolder;
+                        margin-right: 5px;
+                        margin-bottom: 5px;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .demo_film{
+                display: flex;
+                a{
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    color: black;
+                    margin-right: 20px;
+                    &:hover{
+                        color: #999;
+                    }
+                    .icon{
+                        height: 40px;
+                        margin-right: 5px;
+                    }
+                }
+
+            }
+            .info_text{
+                margin-top: 20px;
+                line-height: 25px;
+            }
+            .awards{
+                margin-top: 40px;
+                .each_award{
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                    .icon{
+                        margin-right: 20px;
+                        width: 80px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -21,7 +21,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial","Helvetica", "微軟正黑體", "Noto Sans TC", sans-serif;
+  font-family: "Arial", "Helvetica", "微軟正黑體", "Noto Sans TC", sans-serif;
 }
 
 .w-100 {
@@ -32,9 +32,14 @@ export default {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 p {
   font-size: 14px;
-   font-family: "Noto Sans TC", sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 .mobile {
@@ -45,10 +50,12 @@ p {
   display: block;
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 

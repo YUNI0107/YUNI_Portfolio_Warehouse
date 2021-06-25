@@ -1,0 +1,102 @@
+<div class="project">
+    <div class="top_nav" v-if="project" :style="{background: (project.color || '#fff')}">
+        <a href="#" :class="{'dark': project.dark}">
+            <p> <span>
+                    <</span> Back to All Project</p> </a> <div class="toggle_btn">
+                        <div class="btn minus" title="上一個專案">
+                            <div class="icon">
+                                <img src="../../assets/ProjectIntro/minus.png" class="w-100">
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <h2>#{{router_id}}</h2>
+                            <p>SIDE</p>
+                        </div>
+                        <div class="btn plus" title="下一個專案">
+                            <div class="icon">
+                                <img src="../../assets/ProjectIntro/plus.png" class="w-100">
+                            </div>
+                        </div>
+    </div>
+</div>
+<div class="content_section">
+    <div class="left">
+        <div class="swiper_section">
+            <ProjectSwiper :project="project" :router_id="router_id" />
+        </div>
+        <div class="title_section">
+            <div class="text">
+                <div class="num" v-if="project">
+                    <h2 :style="{color: (project.color || '#fff')}"><span>#</span>{{router_id}}</h2>
+                </div>
+                <div class="title" v-if="project">
+                    <h1>Scan Your Stir Fries</h1>
+                    <p>讓外國觀光客在熱炒店輕鬆點餐</p>
+                </div>
+            </div>
+
+            <div class="links_section" v-if="project">
+                <a :href="project.github" target="_blank">
+                    <div class="github_link">
+                        <div class="icon">
+                            <img src="../../assets/Nav/github.png" class="w-100">
+                        </div>
+                    </div>
+                </a>
+                <a :href="project.web" target="_blank">
+                    <div class="web_link">
+                        <p>WEB LINK</p>
+                        <div class="icon">
+                            <img src="../../assets/ProjectIntro/toggle_icon.png" class="h-100">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="right" v-if="project">
+        <div class="each_intro" v-if="project.coperate">
+            <p class="intro_title">作者</p>
+            <p>張沛琳、周芸卉、陳宇薇、溫晴惟、黃薇</p>
+        </div>
+        <div class="each_intro" v-if="project.coperate">
+            <p class="intro_title">負責</p>
+            <p>程式設計、動態設計、系統流程規劃</p>
+        </div>
+        <div class="each_intro">
+            <div class="tool_list">
+                <div v-for="item in project.skill" class="tool_block" :style="{background: (project.color || '#fff')}">{{item}}</div>
+            </div>
+        </div>
+        <div class="each_intro">
+            <p class="intro_title">特色</p>
+            <ul>
+                <li>語音購物車，用中文向老闆點餐</li>
+                <li>英日韓中，多語言客群的網頁服務</li>
+                <li>量身打造菜色動畫，台灣特色食材小知識</li>
+            </ul>
+        </div>
+        <div class="demo_film" v-if="project.film">
+            <a :href="project.film_links[index]" v-for="(item,index) in project.film_num" target="_blank">
+                <div class="icon">
+                    <img src="../../assets/ProjectIntro/film.png" alt="film" class="h-100">
+                </div>
+                <p>展示影片</p>
+            </a>
+        </div>
+        <div class="info_text">
+            <p>「來點熱炒」是個行動網站，將「QR
+                Code」與「線上網站」結合，讓外國觀光客在熱炒店輕鬆點餐。網站上多種語言的切換，提供一目瞭然的菜色分類方式、台灣特色食材的介紹、視覺化的菜色資訊、有趣的熱炒小遊戲，同時幫助製作外文菜單有困難的台灣在地店家，生成客製化
+                QR Code 菜單。不僅改善了溝通和文化差異所帶來的問題，大幅提升觀光的友善度，將熱炒這項飲食文化推向國際，讓熱炒成為來台必體驗的美食文化！</p>
+        </div>
+        <div class="awards" v-if="project.award">
+            <div class="each_award" v-for="item in project.award_type">
+                <div class="icon">
+                    <img :src="require(`../../assets/project/awards/${item}.png`)" class="w-100">
+                </div>
+                <p>2019 金點新秀設計獎-數位多媒體設計類</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

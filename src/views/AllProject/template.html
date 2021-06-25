@@ -1,0 +1,71 @@
+<div class="all_project">
+    <div class="all_project_content">
+        <div class="left">
+            <div class="cd">
+                <div class="cd_img">
+                    <img class="w-100" src="../../assets/AllProject/cd.png" alt="cd" ref="cd">
+                    <div class="circle_texts" :class="cd_class">
+                        <div class="cd_text text_1" @click="scrollProject('side')">
+                            <div class="icon">
+                                <img src="../../assets/AllProject/play.png" alt="play" class="w-100">
+                            </div>
+                            <p>WEB SIDE PROJECT</p>
+                        </div>
+                        <div class="cd_text text_2" @click="scrollProject('small')">
+                            <div class="icon">
+                                <img src="../../assets/AllProject/play.png" alt="play" class="w-100">
+                            </div>
+                            <p>WEB SMALL PROJECTT</p>
+                        </div>
+                        <div class="cd_text text_3" @click="scrollProject('uiux')">
+                            <div class="icon">
+                                <img src="../../assets/AllProject/play.png" alt="play" class="w-100">
+                            </div>
+                            <p>UI/UX PROJECTT</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle_circle"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="project_section" ref="side">
+                <div class="title">
+                    <h1>WEB SIDE PROJECT</h1>
+                    <div class="info">
+                        <p>專案結合完整功能與多樣技術</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="project_boxs">
+                        <AllProjectBox v-for="item in side_project" :item="item" class="project_box" :key="item.id"/>
+                </div>
+            </div>
+            <div class="project_section" ref="small">
+                <div class="title">
+                    <h1>WEB SMALL PROJECT</h1>
+                    <div class="info">
+                        <p>有趣與快速練習的小網頁</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="project_boxs">
+                        <AllProjectBox v-for="item in small_project" :item="item" class="project_box" :key="item.id"/>
+                </div>
+            </div>
+            <div class="project_section" ref="uiux">
+                <div class="title">
+                    <h1>UI / UX PROJECT</h1>
+                    <div class="info">
+                        <p>負責介面設計與使用者經驗</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="project_boxs">
+                        <AllProjectBox v-for="item in uiux_project" :item="item" class="project_box" :key="item.id"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <FooterSection />
+</div>

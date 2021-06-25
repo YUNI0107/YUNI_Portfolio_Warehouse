@@ -1,0 +1,68 @@
+[
+  {
+    "short_name": "stir",
+    "id": 1,
+    "cate": "side",
+    "skill": ["Vue", "Vue-i18n", "Bootstrap5", "Gsap", "AOS"]
+  },
+  {
+    "short_name": "menu",
+    "id": 2,
+    "cate": "side",
+    "skill": ["Vue", "html2canvas", "File-saver", "Js-zip"]
+  },
+  {
+    "short_name": "bee",
+    "id": 3,
+    "cate": "side",
+    "skill": ["Nuxt", "leaflet", "vue2-leaflet", "Gsap"]
+  },
+  {
+    "short_name": "ball",
+    "id": 4,
+    "cate": "side",
+    "skill": ["Vue", "Google Map", "Gsap", "D3.js", "Swiper", "News API"]
+  },
+  {
+    "short_name": "tomato",
+    "id": 5,
+    "cate": "small",
+    "skill": ["Vue", "PIXI.js", "YouTube API"]
+  },
+  {
+    "short_name": "taichi",
+    "id": 6,
+    "cate": "small",
+    "skill": ["Vue", "Gsap"]
+  },
+  {
+    "short_name": "kal",
+    "id": 7,
+    "cate": "small",
+    "skill": ["Vanilla.js", "Facebook","Css animation"]
+  },
+  {
+    "short_name": "book",
+    "id": 8,
+    "cate": "uiux",
+    "skill": ["System flow", "User experience", "User interface"]
+  },
+  {
+    "short_name": "intern",
+    "id": 9,
+    "cate": "uiux",
+    "skill": ["System flow", "User experience", "User interface"]
+  },
+  {
+    "short_name": "snake",
+    "id": 10,
+    "cate": "uiux",
+    "skill": ["User interface","Design Thinking","Motion Graphic"]
+  },
+  {
+    "short_name": "mvp",
+    "id": 11,
+    "cate": "uiux",
+    "skill": ["User interface", "User research"]
+  }
+]

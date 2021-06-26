@@ -1,0 +1,23 @@
+<div class="project_intro">
+    <div class="top_nav" v-if="project_color_list" :style="{background: backcolor}" >
+        <router-link :to="{name: 'project'}" :class="{'dark': project_color_list[router_id].dark}">
+            <p> <span>
+                    <</span> Back to All Project</p> </router-link> <div class="toggle_btn">
+                        <div class="btn minus" title="上一個專案" @click="toggleProject('-')">
+                            <div class="icon">
+                                <img src="../../assets/ProjectIntro/minus.png" class="w-100">
+                            </div>
+                        </div>
+                        <div class="middle">
+                            <h2>#{{router_id}}</h2>
+                            <p>{{ project_cate }}</p>
+                        </div>
+                        <div class="btn plus" title="下一個專案" @click="toggleProject('+')">
+                            <div class="icon">
+                                <img src="../../assets/ProjectIntro/plus.png" class="w-100">
+                            </div>
+                        </div>
+    </div>
+</div>
+    <router-view></router-view>>
+</div>

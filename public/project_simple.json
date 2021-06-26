@@ -3,42 +3,49 @@
     "short_name": "stir",
     "id": 1,
     "cate": "side",
+    "web": "https://yuni0107.github.io/Scan_Your_Stir_Fries/#/",
     "skill": ["Vue", "Vue-i18n", "Bootstrap5", "Gsap", "AOS"]
   },
   {
     "short_name": "menu",
     "id": 2,
     "cate": "side",
+    "web": "https://yuni0107.github.io/Scan_Your_Stir_Fries/#/menu_builder",
     "skill": ["Vue", "html2canvas", "File-saver", "Js-zip"]
   },
   {
     "short_name": "bee",
     "id": 3,
     "cate": "side",
+    "web": "https://yuni0107.github.io/Bee_Camp/#/",
     "skill": ["Nuxt", "leaflet", "vue2-leaflet", "Gsap"]
   },
   {
     "short_name": "ball",
     "id": 4,
     "cate": "side",
+    "web": "https://yuni0107.github.io/Play_Ball_Game/#/",
     "skill": ["Vue", "Google Map", "Gsap", "D3.js", "Swiper", "News API"]
   },
   {
     "short_name": "tomato",
     "id": 5,
     "cate": "small",
+    "web": "https://yuni0107.github.io/tomato_music_clock/",
     "skill": ["Vue", "PIXI.js", "YouTube API"]
   },
   {
     "short_name": "taichi",
     "id": 6,
     "cate": "small",
+    "web": "https://yuni0107.github.io/taichi2020/#/paper",
     "skill": ["Vue", "Gsap"]
   },
   {
     "short_name": "kal",
     "id": 7,
     "cate": "small",
+    "web": "https://yuni0107.github.io/kac_tool/",
     "skill": ["Vanilla.js", "Facebook","Css animation"]
   },
   {

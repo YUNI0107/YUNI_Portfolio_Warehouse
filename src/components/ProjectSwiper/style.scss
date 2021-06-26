@@ -1,6 +1,7 @@
 .project_swiper{
     .swiper-container.mySwiper2{
         height: 500px;
+        border: solid 0.1px #eee;
     }
     .swiper-container.mySwiper{
         margin-top: 20px;
@@ -51,3 +52,67 @@
     }
 }
 
+@media(max-width: 768px){
+    .project_swiper{
+        .swiper-container.mySwiper2{
+            height: 65vw;
+            max-height: 350px;
+        }
+        .swiper-container.mySwiper{
+            height: 75px;
+        }
+        .toggle_btn{
+            width: 80px;
+            height: 80px;
+            .icon{
+                width: 20px;
+            }
+        }
+        .swiper-button-prev{
+            left: -40px !important;
+            .icon{
+                margin-left: 30px;
+            }
+        }
+        .swiper-button-next{
+            right: -40px !important;
+            .icon{
+                margin-left: -30px;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 576px){
+    .project_swiper{
+        .swiper-container.mySwiper2{
+            height: 65vw;
+            max-height: 350px;
+            border-right: 0;
+            border-left: 0;
+        }
+        .swiper-container.mySwiper{
+            height: 70px;
+        }
+        .toggle_btn{
+            width: 70px;
+            height: 70px;
+            .icon{
+                width: 15px;
+            }
+        }
+        .swiper-button-prev{
+            left: -35px !important;
+            .icon{
+                margin-left: 25px;
+            }
+        }
+        .swiper-button-next{
+            right: -35px !important;
+            .icon{
+                margin-left: -25px;
+            }
+        }
+    }
+}

@@ -4,14 +4,24 @@
     </div>
     <div class="top">
         <img v-if="item" :src="require(`../../assets/project/${item.short_name}/small.jpg`)" alt="project_img">
+        <button v-if="item.web">
+            <a :href="item.web" target="_blank">
+                <div class="icon">
+                    <img src="../../assets/ProjectIntro/toggle_icon.png" class="h-100">
+                </div>
+                <p>Website</p>
+            </a>
+        </button>
     </div>
-    <div class="bottom">
-        <h1>來點熱炒 </h1>
-        <div class="tool_list">
-            <div class="tool" v-for="skill in skill_list" :key="skill">{{ skill }}</div>
+    <router-link :to="`/project_intro/${item.id}`">
+        <div class="bottom">
+            <h1>來點熱炒 </h1>
+            <div class="tool_list">
+                <div class="tool" v-for="skill in skill_list" :key="skill">{{ skill }}</div>
+            </div>
+            <p class="info_text">
+                {{ info_text }}
+            </p>
         </div>
-        <p class="info_text">
-            {{ info_text }}
-        </p>
-    </div>
+    </router-link>
 </div>

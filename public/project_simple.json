@@ -18,7 +18,7 @@
     "id": 3,
     "cate": "side",
     "web": "https://yuni0107.github.io/Bee_Camp/#/",
-    "skill": ["Nuxt", "leaflet", "vue2-leaflet", "Gsap"]
+    "skill": ["Nuxt","OpenStreetMap", "leaflet", "vue2-leaflet", "Gsap"]
   },
   {
     "short_name": "ball",
@@ -64,7 +64,7 @@
     "short_name": "snake",
     "id": 10,
     "cate": "uiux",
-    "skill": ["User interface","Design Thinking","Motion Graphic"]
+    "skill": ["User interface","Motion Graphic"]
   },
   {
     "short_name": "mvp",

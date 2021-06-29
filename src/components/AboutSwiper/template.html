@@ -1,7 +1,10 @@
 <div class="about_swiper">
-    <div class="swiper-container mySwiper">
+  <transition name="fade">
+    <AboutPicModal v-show="modal_show" :pic_num="pic_num" @modalClose="modalClose"/>
+  </transition>
+    <div class="swiper-container mySwiper" ref="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="(item,index) in 6">
+          <div class="swiper-slide" v-for="(item,index) in 6" @click="swiperClick">
               <img :src="require(`../../assets/About/l_about_${index+1}.jpg`)" alt="about_pic">
           </div>
         </div>

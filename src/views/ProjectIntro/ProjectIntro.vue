@@ -50,7 +50,9 @@ export default {
       }
     },
   },
-  mounted() {},
+  mounted() {
+    this.$store.dispatch("initProject");
+  },
 };
 </script>
 <template src="./template.html"></template>

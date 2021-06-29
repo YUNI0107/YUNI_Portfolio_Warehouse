@@ -1,0 +1,26 @@
+<div class="fam_modal">
+    <div class="content" @click.self="toggleModal">
+        <div class="modal">
+            <div class="close" @click="toggleModal">
+                <img src="../../assets/Modal/close.png" alt="close" class="w-100">
+            </div>
+            <div class="title">
+                <h2>Familiarity</h2>
+            </div>
+            <div class="fam">
+                <div class="fam_each" v-for="item in fam_list">
+                    <div class="skill">
+                        <div class="skill_img">
+                            <img :src="require(`../../assets/skill/${item.img}.png`)" alt="skill" class="w-100">
+                        </div>
+                        <p>{{ item.text }}</p>
+                    </div>
+                    <div class="bar">
+                        <div class="bar_length" :class="{'blue': item.blue}" :style="{width: item.length + '%'}"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>

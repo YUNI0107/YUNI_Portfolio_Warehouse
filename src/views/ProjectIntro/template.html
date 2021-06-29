@@ -19,5 +19,7 @@
                         </div>
     </div>
 </div>
-    <router-view></router-view>>
+    <transition name="fade" mode="out-in">
+        <router-view :key="$route.params.id"></router-view>
+    </transition>
 </div>

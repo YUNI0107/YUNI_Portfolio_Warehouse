@@ -1,4 +1,5 @@
 <script>
+import ProjectPicModal from "@/components/ProjectPicModal/ProjectPicModal";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
 import "swiper/components/navigation/navigation.min.css";
@@ -12,12 +13,15 @@ export default {
   props: ["project", "router_id"],
   data() {
     return {
+      modal_show: false,
+      first_init: true,
       swiper1: null,
       swiper2: null,
+      pic_num: 0,
     };
   },
-  watch: {
-    project() {
+  methods: {
+    changeSwiper() {
       if (this.router_id !== null && this.project !== null) {
         let vue_this = this;
         this.$nextTick(() => {
@@ -47,6 +51,34 @@ export default {
         });
       }
     },
+    swiperClick() {
+      this.pic_num = this.swiper2.clickedIndex;
+      this.modal_show = true;
+      if (this.first_init == true) {
+        this.$refs.modal.$emit("modalOpen", true);
+      } else {
+        this.$refs.modal.$emit("modalOpen", false);
+      }
+      this.first_init = false;
+    },
+    modalClose() {
+      this.modal_show = false;
+    },
+    numReset() {
+      this.$refs.modal.modalDestory();
+      this.pic_num = 0;
+    },
+  },
+  components: {
+    ProjectPicModal,
+  },
+  watch: {
+    project() {
+      this.changeSwiper();
+    },
+  },
+  mounted() {
+    this.changeSwiper();
   },
 };
 </script>

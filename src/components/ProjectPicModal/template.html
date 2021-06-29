@@ -1,0 +1,26 @@
+<div class="about_pic_modal">
+    <div class="content" @click.self="modalClose">
+        <div class="modal">
+            <div class="close" @click="modalClose">
+                <img src="../../assets/Modal/close.png" alt="close" class="w-100">
+            </div>
+            <div class="swiper-container mySwiperModal">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="(item,index) in project.pic_num">
+                        <img :src="require(`../../assets/project/${project.short_name}/${item}.jpg`)"/>
+                    </div>
+                </div>
+                <div class="swiper-button-next toggle_btn">
+                    <div class="icon">
+                        <img src="../../assets/ProjectIntro/toggle_icon.png" alt="toggle" class="w-100">
+                    </div>
+                </div>
+                <div class="swiper-button-prev toggle_btn">
+                    <div class="icon">
+                        <img src="../../assets/ProjectIntro/toggle_icon.png" alt="toggle" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

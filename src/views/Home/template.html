@@ -1,34 +1,36 @@
 <div class="home">
     <div class="banner_section">
         <div class="top_section mobile">
-            <div class="big_title">
-                <h1>YUNI ‘S</h1>
-                <h1>PORTFOLIO WAREHOUSE
-                    <span class="tag">
-                        <span>2021.</span>
-                        <span>Chou Yun-Huei</span>
-                    </span>
-                </h1>
+            <div class="title_hold">
+                <div class="big_title">
+                    <h1>YUNI ‘S</h1>
+                    <h1>PORTFOLIO WAREHOUSE
+                        <span class="tag">
+                            <span>2021.</span>
+                            <span>Chou Yun-Huei</span>
+                        </span>
+                    </h1>
+                </div>
             </div>
             <div class="hashtag_content">
                 <div class="hashtag">
                     <span class="hash">#</span>
                     <div class="text">
                         <h2>FrontEnd</h2>
-                        <span>前端開發</span>
+                        <span v-if="en_show">前端開發</span>
                     </div>
                 </div>
                 <div class="hashtag">
                     <span class="hash">#</span>
                     <div class="text">
                         <h2>Microinteractions</h2>
-                        <span>微互動</span>
+                        <span v-if="en_show">微互動</span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="left">
-            <div class="cd_section">
+            <div class="cd_section rellax" data-rellax-speed="-3" data-rellax-tablet-speed="2"  data-rellax-xs-speed="2" data-rellax-mobile-speed="2">
                 <div class="inside_cd"></div>
                 <div class="circlr_group">
                     <div class="circle"></div>
@@ -47,10 +49,10 @@
                 </div>
             </div>
             <div class="back">
-                <img src="../../assets/Home/water.jpeg">
+                <!-- <img src="../../assets/Home/water.jpeg"> -->
             </div>
         </div>
-        <div class="right">
+        <div class="right rellax" data-rellax-speed="4" data-rellax-tablet-speed="0"  data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
             <div class="title_hold mobile_none">
                 <div class="big_title">
                     <h1>YUNI ‘S</h1>
@@ -68,34 +70,33 @@
                         <span class="hash">#</span>
                         <div class="text">
                             <h2>FrontEnd</h2>
-                            <span>前端開發</span>
+                            <span  v-if="en_show">前端開發</span>
                         </div>
                     </div>
                     <div class="hashtag">
                         <span class="hash">#</span>
                         <div class="text">
                             <h2>Microinteractions</h2>
-                            <span>微互動</span>
+                            <span  v-if="en_show">微互動</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="intro_content">
                 <div class="title">
-                    <h4>Introduction</h4>
-                    <button>More About Me</button>
+                    <h4>{{ $t('home.intro') }}</h4>
+                    <button><router-link to="/about">More About Me</router-link></button>
                 </div>
                 <div class="intro_text">
                     <p>
-                        您好，我是YUNI。專注於前端開發，喜歡研究各式的網頁效果，擁有很高的自我學習力與規劃能力，目前沈迷於接觸趨勢的發展，希望可以將能力應用在實務中。目前是Junior的開發者，作品集放置了許多近期製作的Side
-                        Project與各專案所應用的技術！
+                        {{ $t('home.intro_text') }}
                     </p>
                 </div>
             </div>
         </div>
     </div>
     <div class="control_section">
-        <div class="control_img">
+        <div class="control_img rellax" data-rellax-speed="6" data-rellax-tablet-speed="2" data-rellax-xs-speed="2" data-rellax-mobile-speed="2">
             <img class="w-100" src="../../assets/Home/control.png" alt="control">
         </div>
     </div>
@@ -110,7 +111,7 @@
         <div class="right">
             <div class="title">
                 <h2>ABOUT ME</h2>
-                <button>More About Me</button>
+                <button><router-link to="/about">More About Me</router-link></button>
             </div>
             <div class="name">
                 <h2 class="ch_name">周芸卉</h2>
@@ -118,16 +119,16 @@
                 <p class="birthday">1997 / 01 / 07</p>
             </div>
             <div class="exe">
-                <h3 class="exe_title">教育背景</h3>
+                <h3 class="exe_title">{{ $t('home.about_edu') }}</h3>
                 <div class="school">
                     <div class="date">
                         <span>2019</span>
                         <div class="line"></div>
                         <span>2021</span>
-                        <h4 class="degree">碩士學位</h4>
+                        <h4 class="degree">{{ $t('home.1_edu_degree') }}</h4>
                     </div>
                     <div class="exe_info">
-                        <p>國立臺北科技大學<span>互動設計系研究所</span> </p>
+                        <p>{{ $t('home.1_edu_school') }}<span>{{ $t('home.1_edu_master') }}</span> </p>
                     </div>
                 </div>
                 <div class="school">
@@ -135,14 +136,14 @@
                         <span>2015</span>
                         <div class="line"></div>
                         <span>2019</span>
-                        <h4 class="degree">學士學位</h4>
+                        <h4 class="degree">{{ $t('home.2_edu_degree') }}</h4>
                     </div>
                     <div class="exe_info">
-                        <p>國立臺灣藝術大學 <span>視覺傳達設計系</span> </p>
+                        <p>{{ $t('home.2_edu_school') }} <span>{{ $t('home.2_edu_master') }}</span> </p>
                     </div>
                 </div>
                 <div class="long_line"></div>
-                <h3 class="exe_title">技術與能力</h3>
+                <h3 class="exe_title">{{ $t('home.about_skill') }}</h3>
                 <div class="skill_btn">
                     <LittleBtn v-for="item in skill_list" :item="item" :key="item.name" />
                 </div>
@@ -153,21 +154,21 @@
         <HomeSwiper :project="side_project" />
         <div class="title">
             <h1>WEB SIDE PROJECT</h1>
-            <p>專案結合完整功能與多樣技術</p>
+            <p>{{ $t('project_text.side') }}</p>
         </div>
     </div>
     <div class="project_section small_project">
         <HomeSwiper :project="small_project" />
         <div class="title">
             <h1>WEB SMALL PROJECT</h1>
-            <p>有趣與快速練習的小網頁</p>
+            <p>{{ $t('project_text.small') }}</p>
         </div>
     </div>
     <div class="project_section uiux_project">
         <HomeSwiper :project="uiux_project" />
         <div class="title">
             <h1>UI / UX PROJECT</h1>
-            <p>負責介面設計與使用者經驗</p>
+            <p>{{ $t('project_text.uiux') }}</p>
         </div>
     </div>
     <FooterSection />

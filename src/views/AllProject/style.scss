@@ -5,9 +5,15 @@
     .all_project_content{
         padding-bottom: 100px;
         min-height: 100vh;
+        display: flex;
         .left{
+            height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
             .cd{
-                height: 100%;
+                @include fade;
+                animation: fade 1s;
+                height: auto;
                 padding: 30px 0;
                 position: fixed;
                 margin-left: -180px;

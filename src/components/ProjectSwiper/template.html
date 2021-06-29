@@ -1,10 +1,13 @@
 <div class="project_swiper" v-if="project">
+  <transition name="fade" >    
+    <ProjectPicModal v-show="modal_show" :pic_num="pic_num" :project="project" @modalClose="modalClose" ref="modal"/>
+  </transition>
     <div
     style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
     class="swiper-container mySwiper2"
   >
     <div class="swiper-wrapper">
-      <div class="swiper-slide" v-for="item in project.pic_num">
+      <div class="swiper-slide" v-for="item in project.pic_num" @click="swiperClick">
         <img :src="require(`../../assets/project/${project.short_name}/${item}.jpg`)"/>
       </div>
     </div>

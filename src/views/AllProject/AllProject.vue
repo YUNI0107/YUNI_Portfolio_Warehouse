@@ -54,6 +54,8 @@ export default {
     }
   },
   mounted() {
+    document.title = "All Projects - YUNI's PORTFOLIO";
+
     axios.get("project_simple.json").then((res) => {
       this.side_project = res.data.filter((item) => item.cate == "side");
       this.small_project = res.data.filter((item) => item.cate == "small");

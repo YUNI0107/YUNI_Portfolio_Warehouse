@@ -1,0 +1,119 @@
+@import "@/assets/scss/main.scss";
+.about_pic_modal{
+    @include modal;
+    .content{
+        padding: 0 20px;
+        .modal{
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            .close{
+                z-index: 2500;
+                img{
+                    filter: brightness(2) drop-shadow(0px 0px 5px rgba(17, 17, 17, 0.2));
+                }
+            }
+            .swiper-slide{
+                cursor: auto;
+                height: auto;
+                img{
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .toggle_btn{
+                &::after{
+                    content: none;
+                }
+                &::after{
+                    content: none;
+                }
+                background-color: #fff;
+                width: 120px;
+                height: 120px;
+                box-shadow: 0px 0px 10px rgba(38, 38, 38, 0.05);
+                transform: translateY(-25%);
+                .icon{
+                    width: 25px;
+                }
+            }
+            .swiper-button-prev.swiper-button-disabled,.swiper-button-next.swiper-button-disabled{
+                opacity: 1;
+                .icon{
+                    opacity: .5;
+                }
+            }
+            .swiper-button-prev{
+                border-radius: 0 50% 50% 0;
+                left: -60px !important;
+                .icon{
+                    margin-left: 30px;
+                    transform: rotate(180deg);
+                }
+            }
+            .swiper-button-next{
+                border-radius: 50% 0 0 50%;
+                right: -60px !important;
+                .icon{
+                    margin-left: -30px;
+                }
+            }
+            .info_text{
+                position: absolute;
+                bottom: 0;
+                z-index: 2500;
+                width: 100%;
+                padding: 10px 20px;
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .about_pic_modal{
+        .content{
+            .modal{
+                .toggle_btn{
+                    width: 80px;
+                    height: 80px;
+                    .icon{
+                        width: 20px;
+                    }
+                }
+                .swiper-button-prev{
+                    left: -40px !important;
+                    .icon{
+                        margin-left: 30px;
+                    }
+                }
+                .swiper-button-next{
+                    right: -40px !important;
+                    .icon{
+                        margin-left: -30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .about_pic_modal{
+        .content{
+            padding: 0 5px;
+            .modal{
+                position: inherit;
+                .close{
+                    position: absolute;
+                    top: 20px;
+                }
+                .info_text{
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}

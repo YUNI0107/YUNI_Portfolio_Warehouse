@@ -1,8 +1,8 @@
 <div class="project">
-<div class="content_section">
+<div class="content_section" v-if="project">
     <div class="left">
         <div class="swiper_section">
-            <ProjectSwiper :project="project" :router_id="router_id" />
+            <ProjectSwiper :project="project" :router_id="router_id" ref="swiper"/>
         </div>
         <div class="title_section">
             <div class="text">
@@ -10,12 +10,12 @@
                     <h2 :style="{color: (project.color || '#fff')}"><span>#</span>{{router_id}}</h2>
                 </div>
                 <div class="title" v-if="project">
-                    <h1>Scan Your Stir Fries</h1>
-                    <p>讓外國觀光客在熱炒店輕鬆點餐</p>
+                    <h1><a :href="project.web" target="_blank">{{ $t(`all_projects.${project.short_name}.name`) }}</a></h1>
+                    <p>{{ $t(`all_projects.${project.short_name}.short`) }}</p>
                 </div>
             </div>
 
-            <div class="links_section" v-if="project">
+            <div class="links_section" v-if="project.web">
                 <a :href="project.github" target="_blank">
                     <div class="github_link">
                         <div class="icon">
@@ -36,12 +36,12 @@
     </div>
     <div class="right" v-if="project">
         <div class="each_intro" v-if="project.coperate">
-            <p class="intro_title">作者</p>
-            <p>張沛琳、周芸卉、陳宇薇、溫晴惟、黃薇</p>
+            <p class="intro_title">{{ $t(`project_intro.author`) }}</p>
+            <p>{{ $t(`all_projects.${project.short_name}.author`) }}</p>
         </div>
         <div class="each_intro" v-if="project.coperate">
-            <p class="intro_title">負責</p>
-            <p>程式設計、動態設計、系統流程規劃</p>
+            <p class="intro_title">{{ $t(`project_intro.res`) }}</p>
+            <p>{{ $t(`all_projects.${project.short_name}.responsible`) }}</p>
         </div>
         <div class="each_intro">
             <div class="tool_list">
@@ -49,11 +49,9 @@
             </div>
         </div>
         <div class="each_intro">
-            <p class="intro_title">特色</p>
+            <p class="intro_title">{{ $t(`project_intro.feature`) }}</p>
             <ul>
-                <li>語音購物車，用中文向老闆點餐</li>
-                <li>英日韓中，多語言客群的網頁服務</li>
-                <li>量身打造菜色動畫，台灣特色食材小知識</li>
+                <li v-for="(item,index) in project.fea_num">{{ $t(`all_projects.${project.short_name}.feature_${index+1}`) }}</li>
             </ul>
         </div>
         <div class="demo_film" v-if="project.film">
@@ -61,20 +59,18 @@
                 <div class="icon">
                     <img src="../../assets/ProjectIntro/film.png" alt="film" class="h-100">
                 </div>
-                <p>展示影片</p>
+                <p>{{ $tc(`all_projects.${project.short_name}.film`, index+1) }}</p>
             </a>
         </div>
         <div class="info_text">
-            <p>「來點熱炒」是個行動網站，將「QR
-                Code」與「線上網站」結合，讓外國觀光客在熱炒店輕鬆點餐。網站上多種語言的切換，提供一目瞭然的菜色分類方式、台灣特色食材的介紹、視覺化的菜色資訊、有趣的熱炒小遊戲，同時幫助製作外文菜單有困難的台灣在地店家，生成客製化
-                QR Code 菜單。不僅改善了溝通和文化差異所帶來的問題，大幅提升觀光的友善度，將熱炒這項飲食文化推向國際，讓熱炒成為來台必體驗的美食文化！</p>
+            <p>{{ $t(`all_projects.${project.short_name}.detial`) }}</p>
         </div>
         <div class="awards" v-if="project.award">
-            <div class="each_award" v-for="item in project.award_type">
+            <div class="each_award" v-for="(item,index) in project.award_type">
                 <div class="icon">
                     <img :src="require(`../../assets/project/awards/${item}.png`)" class="w-100">
                 </div>
-                <p>2019 金點新秀設計獎-數位多媒體設計類</p>
+                <p>{{ $tc(`all_projects.${project.short_name}.award`, index+1) }}</p>
             </div>
         </div>
     </div>

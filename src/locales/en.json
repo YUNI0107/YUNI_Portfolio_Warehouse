@@ -1,0 +1,203 @@
+{
+  "home": {
+    "intro": "Introduction",
+    "intro_text": "Hi, my name is YUNI. I focus on front-end development I indulge in fashion trends and strengthen related knowledge. I hope to apply those ability in practice. This portfolio displays some Side Projects and lists the technologies used in each project. Come and enjoy those projects with me!",
+    "about_edu": "EDUCATION",
+    "1_edu_degree": "Master degree",
+    "1_edu_school": "National Taipei University of Technology",
+    "1_edu_master": "Department of Interaction Design  Master’s Program" ,
+    "2_edu_degree": "Bachelor degree",
+    "2_edu_school": "Nation Taiwan University of Arts",
+    "2_edu_master": "Department of Visual Communication Design",
+    "about_skill": "Skills and competencies"
+  },
+  "nav":{
+    "home": "Home",
+    "all": "All Projects",
+    "about": "About Me",
+    "1_pic": "Home",
+    "1_pic_text": "From the homepage, you can quickly understand the author's professional ability and background. It shows my dynamic programming ability and characteristics.",
+    "2_pic": "Projects",
+    "2_pic_text": "Here are my recent projects. There are complete Side Projects and small interesting webpages to improve the coding skill through production. ",
+    "3_pic": "About",
+    "3_pic_text": "You can understand my personality and technical ability from About me. The author can integrate multiple ability with my projects."
+  },
+  "about":{
+    "text_1": "Hello there! I am 周芸卉 and Yuni is my nickname",
+    "text_2": "If there is something that can represent me, it should be my dedication to my hobbies. I can sit in front of desk concentratedly with my laptop during the holidays.",
+    "text_3": "I am passionate about self-learning so that I can solve problems by myself. I can integrate cross-industry skills well in a team. I like the creative thinking happening between communication with team members. I also look forward to completing more fantastic projects in the future.",
+    "web_text_1": "I am good at creating interactive websites with dynamic effects, and it’s fun to make surprises that brighten users. At present, I am committed to cultivating the logic and data structure. I can already read large documents and apply. I set learning goals for myself every month.",
+    "web_text_2_1": "I am familiar with",
+    "web_text_2_2": "for",
+    "web_text_2_3": "request and",
+    "web_text_2_4": "is my favorite . It will bookmark technical articles and record the solutions on HackMD when encountering difficulties. After that, I want to start writing technical blogs and give back to those knowledge.",
+    "web_future_1": "Change to",
+    "web_future_2": "gradually. I hope I can use",
+    "web_future_3": "to make SSR websites with Express someday.",
+    "fam": "Familiarity",
+    "1_edu_degree": "Master degree",
+    "1_edu_school": "National Taipei University of Technology",
+    "1_edu_master": "Department of Interaction Design  Master’s Program" ,
+    "2_edu_degree": "Bachelor degree",
+    "2_edu_school": "Nation Taiwan University of Arts",
+    "2_edu_master": "Department of Visual Communication Design",
+    "1_exe_title": "NTUT User Experience and Interface Design Lab",
+    "1_exe_position": "Research assistant",
+    "1_exe_info": "NTUT Intern system research、The National Library of Public Information children’s book searching APP",
+    "2_exe_title": "TAICHI 2020",
+    "2_exe_position": "Visual Designer   Agenda Programer",
+    "2_exe_info": "Taiwanese association of Computer-Human Interaction annual conference",
+    "3_exe_title": "Vision Get Wild - Mobile Application Planning",
+    "3_exe_position": "Gold Award",
+    "3_exe_info": "Take as you Take",
+    "4_exe_title": "Young Pin Design Award",
+    "4_exe_position": "Digital Multimedia",
+    "4_exe_info": "Scan Your Stir-Fries",
+    "5_exe_title": "104th NTUA Student Association of Visual Communication Design Department ",
+    "5_exe_position": "Director"
+  },
+  "about_pic":{
+    "pic_1": "2019 OpenHCI'19 Human-Computer workshop",
+    "pic_2": "2020 Vision Get Wild",
+    "pic_3": "2019 Young Designers' Exhibition - Young Pin Design Award",
+    "pic_4": "2020 National Library of Public Information - App",
+    "pic_5": "2019 《Scan Your Stir-Fries》presentation",
+    "pic_6": "Photography is my hobby！😍"
+  },
+  "project_text":{
+    "side": "Project combine complete  features  and  multiple technology",
+    "small": "Project for fun and practive",
+    "uiux": "Project which I was responsible for UI / UX"
+  },
+  "project_intro":{
+    "author": "Author",
+    "res": "Responsibility",
+    "feature": "Feature" 
+  },
+  "all_projects":{
+    "stir":{
+      "name": "Scan Your Stir Fries",
+      "author": "張沛琳、周芸卉、陳宇薇、溫晴惟、黃薇",
+      "short": "Let foreign tourists easily order dishes in stir-fried restaurants",
+      "box": "「Scan Your Stir Fries」is a website that helps to create menu with QR-code to help foreign visitors communicate with local stir-fry restaurants.",
+      "responsible": "Programming、Motion graphic、Process planning",
+      "feature_1": "Multilingual web services with English, Japanese, Korean, Chinese",
+      "feature_2": "Use Voice shopping cart to order food in Chinese",
+      "feature_3": "Animation for each dish to introduce Taiwanese special ingredient",
+      "feature_4": "A Lotto game let you never feel bored when waiting a meal",
+      "film": "Demo film | Propaganda film",
+      "detial": "「Scan Your Stir Fries」is a website that helps to create menu with QRcode to help foreign visitors communicate with local stir-fry restaurants. For owners who have trouble creating multi-language menus. The menus introduce a brand new way to sort out the dishes by ingredients and flavor, which is similar to the usual menus shown in Western-style restaurants. Multi-language menus promote stir-fry cuisines in Taiwan, and they are one of the cultural experiences that can’t be missed in Taiwan.",
+      "award": "Young Pin Design Award - Digital Multimedia | A+ Cultural Resources Creative Season Digital Multimedia – Golden award"
+    },
+    "menu":{
+      "name": "Multilingual Menu Builder",
+      "author": "張沛琳、周芸卉、陳宇薇、溫晴惟、黃薇",
+      "short": "Help the stir-fried restaurants to generate their exclusive foreign language menu",
+      "box": "The service is available in English, Japanese, and Korean and the dishes can be selected according to the needs of the store. In this way, our wed generated a menu that contain a set design with QR-Code and plenty of information. The clear foreign menu is simply completed!",
+      "responsible": "Programming、Motion graphic、Process planning",
+      "feature_1": "Generate informative menu with beautiful design",
+      "feature_2": "Multilingual menu to satisfy store customers",
+      "feature_3": "Compressed pictures which is easy to print into a file",
+      "feature_4": "The store can select their own recommends for the dishes",
+      "detial": "The owner of the stir-fried restaurants only needs to enter the 'menu builder' page, and then checks the restaurant's dishes. Finally, the web will help them automatically  the QR-CODE of our web and dishes information in English, Japanese, or Korean. Just print those A4 menus out and nail them together. It's easy to complete!",
+      "award": "Young Pin Design Award - Digital Multimedia | A+ Cultural Resources Creative Season Digital Multimedia – Golden award"
+    },
+    "bee":{
+      "name": "Camping Bee",
+      "author": "周芸卉、林于暄",
+      "short": "Sort out the most trending mountain scenery in 2020 for campers",
+      "box": "You can search for Taiwan's characteristic campsites and the website sorts out the best mountain and forest scenery in 2020 for campers. Create your own pocket list and pocket map. Let’s start a camping trip!",
+      "responsible": "Programming、Illustration",
+      "feature_1": "Cute and surprising website dynamic effects",
+      "feature_2": "Conditional search to find a campsite that matches you",
+      "feature_3": "Add makers to generate exclusive pocket map",
+      "feature_4": "Put selected camping equipment into the shopping cart",
+      "detial": "Camping Bee has compiled the most rammed mountain forest scenery for camper in 2020. You can search for your favorite campsite according to your needs. There are a total of 32 campsites, divided into 'luxury camping' and 'normal camping'. These campsites have organized related facilities and unique features. You can add these campsites to your wish list to generate a unique pocket map! A selection of camping brands allows you to choose the most complete and cheapest camping equipment products!"
+    },
+    "ball":{
+      "name": "Let’s play a ball game",
+      "short": "The most kindly recorder for your ball game appointments",
+      "box": "The five most popular ball in Taiwan: record the activities and set up a monthly goal. Quickly find the stadium closest to you and recommend ball products according to your preferences!",
+      "feature_1": "Record your appointment about ball game and accumulate the points",
+      "feature_2": "Google map searches for the stadium closest to you",
+      "feature_3": "Kindly reminder of the current weather according to your location",
+      "feature_4": "Recommend the most suitable product for you according to your preferences",
+      "feature_5": "Never miss the latest ball game events’ information",
+      "detial": "The five most popular ball in Taiwan: football, table tennis, tennis, volleyball, and basketball! The website provides the function of recording the activities, and you can accumulate points every time you complete an appointment. You can directly connect to Google Map from the record for navigation, and you can also quickly find the stadium closest to you according to different ball types. According to your favorite ball, it will recommend your favorite ball product! You can see the latest news and don’t miss any interesting events happening in the five major ball sports events."
+    },
+    "tomato":{
+      "name": "PIXI.JS Pomodoro Timer",
+      "short": "Countdown widget combined with music function",
+      "box": "This is a countdown widget designed according to the Pomodoro working method. You can choose the music or use your favorite YouTube film!",
+      "feature_1": "Set countdown timers with different lengths",
+      "feature_2": "Choose the style of music you like when you’re working",
+      "feature_3": "You can use your favorite music by posting a YouTube link",
+      "feature_4": "The background will have some surprising changes according to the work style",
+      "detial": "This is a countdown timer with music. The Pomodoro work method is a way of working to improve work efficiency. Work at a prescribed time, short breaks and long breaks. I want to use this concept to develop a small tool combined with the function of playing music. I tried to play the YouTube API. At the same time, I also want to take this opportunity to experience PIXI.js, so I made an interesting little change in the background speed of different working modes."
+    },
+    "taichi":{
+      "name": "TAICHI 2020 online agenda",
+      "short": "A lightweight online agenda made for the TAICHI 2020 seminar",
+      "box": "This is a lightweight online agenda made for the TAICHI 2020 seminar (HCI, Human-Computer Interaction), and a header animation that convey the main concept is designed.",
+      "feature_1": "Interactive visual animation effect fitting the conference topic",
+      "feature_2": "Quickly scroll to the activities you are interested in after clicking",
+      "feature_3": "Design the flexible components for each part in order to deploy as quickly as possible",
+      "detial": "This is an online agenda made for the TAICHI 2020 conference (HCI, Human-Computer Interaction). Since the paper DM is too late to print on the information of agenda, participants can use the QRCODE on the paper DM to link to this online agenda. Each block has a modular design, in response to the need to be able to go online as quickly as possible. The theme of this conference is 'Interact w/o Contact', so an interesting small animation was made in the header to convey this concept."
+    },
+    "kal":{
+      "name": "CALORIES - BMR 、TDEE calories calculator",
+      "short": "Calculate your daily demand and share your goals",
+      "box": "A small tool coding in native JavaScript can calculate your Basal Metabolic Rate and d Total Daily Energy Expenditure. You can share the results on Facebook!",
+      "feature_1": "BMR + TDEE calculation formula",
+      "feature_2": "Share the calculation results on your Facebook",
+      "detial": "A small tool coding in native JavaScript can calculate your Basal Metabolic Rate and d Total Daily Energy Expenditure. One day when I was searching for how to calculate my BMR, I accidentally saw a web page composed of various small tools. It suddenly occurred to me that I can also do a small calorie calculation tool to practice! In order not to make the small tool CALORIES too boring, I practiced making 3D card effects and connecting Facebook SDK for JavaScript to realize a simple sharing function."
+    },
+    "book":{
+      "name": "《Book Searching Monster》APP",
+      "author": "周芸卉、徐郁雯、許芳嫚",
+      "short": "National Library of Public Information - Create exclusive reading records for children",
+      "box": "Book Searching Monster is a project cooperating with the National Library of Public Information. It can make an exclusive reading record for children!",
+      "responsible": "System flow 、 User experience 、 User Interface",
+      "feature_1": "AR search navigation in the library",
+      "feature_2": "Recommended books and special mood classification",
+      "feature_3": "Establish a book club for book exchange",
+      "feature_4": "Record the books in my room",
+      "film": "Demo film | Promoting event film",
+      "detial": "「Scan Your Stir Fries」is a website that helps to create menu with QRcode to help foreign visitors communicate with local stir-fry restaurants. For owners who have trouble creating multi-language menus. The menus introduce a brand new way to sort out the dishes by ingredients and flavor, which is similar to the usual menus shown in Western-style restaurants. Multi-language menus promote stir-fry cuisines in Taiwan, and they are one of the cultural experiences that can’t be missed in Taiwan.",
+      "award": "National Library of Public Information"
+    },
+    "intern":{
+      "name": "NTUT《I-intern》Internship System",
+      "author": "周芸卉、徐郁雯",
+      "short": "Digitize the process to create an excellent internship platform",
+      "box": "We integrated huge paper documents from them and let the internship process digitized. Create an excellent internship platform, and it is more conducive to data analysis.",
+      "responsible": "System flow 、 User research 、 Some part of user interface ",
+      "feature_1": "Interface design that is simple and easy to understand",
+      "feature_2": "Provide a matching platform for more companies to see the students",
+      "feature_3": "Digitize the complex paper programs",
+      "detial": "The traditional internship process is complicated and trivial, and the paper-based process causes inconvenience to save the materials. Therefore, this project digitizes the process and hopes to create an excellent internship platform. This project develops four identity roles. After completing the tasks of each role, you can avoid duplication of information and improve efficiency."
+    },
+    "snake":{
+      "name": "《GOGO! COUPON SNAKE》 New retail shopping pattern",
+      "author": "周芸卉、徐郁雯、林政諺、邱奕辰",
+      "short": "Create a new way of hypermarket promotion",
+      "box": "Book Searching Monster is a project cooperating with the National Library of Public Information. It can make an exclusive reading record for children!",
+      "responsible": "User Interface 、 Design Thinking 、 Motion Graphic",
+      "feature_1": "Image recognition let you easy to receive product information",
+      "feature_2": "The phone is integrated in the shopping cart with the phone holder",
+      "feature_3": "Combine background computing to create personal coupons",
+      "film": "Demo film",
+      "detial": "We have found that consumers who go to physical hypermarket are gradually decreasing because of online shopping. Therefore, our team focus on the marketing service and made a creative concept. The App apply with gamification features, so the consumers can feel like hunting treasure in the treasure house. In addition, we capture consumers’ curious information about products and launch personalized promotions to achieve consumer attractiveness. Merchants can collect users' consumption habits and adjust marketing strategies. Create a brand-new way of promotion in hypermarket and gamification of marketing activities!"
+    },
+    "mvp":{
+      "name": "《MVP Café & Restaurant》APP Redesign Practice",
+      "author": "周芸卉、徐郁雯",
+      "short": "User experience transformation plan",
+      "box": "This is a small coursework project to improve the user experience of the old APP. According to our on-site visits and using the entire process of the old APP. We redesigned the process for each problem, hoping to optimize the user experience.",
+      "responsible": "User research 、 User Interface",
+      "feature_1": "Survey Brand image and main customer groups",
+      "feature_2": "10 user experience transformations",
+      "detial": "This is a small coursework project to improve the user experience of the old APP. According to our on-site visits and using the entire process of the old APP. We redesigned the process for each problem, hoping to optimize the user experience."
+    }
+  }
+}

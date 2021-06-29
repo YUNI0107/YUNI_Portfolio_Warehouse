@@ -2,10 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 
 .about {
-  @include theme;
   .about_content {
+    @include theme;
     padding-bottom: 100px;
-    padding-top: 100px;
+    padding-top: 120px;
     display: flex;
     .about_title {
       color: $text_blue;
@@ -25,6 +25,7 @@
           .pic_people {
             position: relative;
             width: 300px;
+            height: 300px;
             img {
               position: relative;
               z-index: 2;
@@ -36,9 +37,20 @@
               right: 0;
               z-index: 1;
               transform: translate(40%, -50%);
+              animation: cd_init .5s .5s backwards;
+              @keyframes cd_init {
+                0%{
+                  transform: translate(0%, -50%) rotate(-90deg);
+                }
+                100%{
+                  transform: translate(40%, -50%) rotate(0deg);
+                }
+              }
             }
           }
           .name_content {
+            @include fade;
+            animation: fade 1s backwards;
             h1 {
               margin-top: 20px;
               margin-bottom: 10px;
@@ -239,12 +251,15 @@
             }
           }
           .exe_name {
-            font-size: 16px;
             display: inline-block;
+            color: $text_blue;
+            font-weight: bolder;
             span {
+              font-size: 16px;
               display: inline-block;
-              color: $text_blue;
-              font-weight: bolder;
+              color: black;
+              font-weight: normal;
+              margin-right: 10px;
             }
           }
           .info {
@@ -277,7 +292,7 @@
 @media (max-width: 992px) {
   .about {
     .about_content {
-      padding-top: 80px;
+      padding-top: 120px;
       flex-direction: column;
       .left {
         .left_content {
@@ -334,6 +349,7 @@
             .pic_people {
               position: relative;
               width: 65vw;
+              height: 65vw;
               min-width: 200px;
               max-width: 300px;
               img {

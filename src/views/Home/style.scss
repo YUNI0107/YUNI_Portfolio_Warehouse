@@ -34,6 +34,7 @@
       }
 }
 
+
 .home {
   @include theme;
   // background-color: aqua;
@@ -60,6 +61,7 @@
         width: 50vw;
         height: 50vw;
         border-radius: 50%;
+        animation:  bigger backwards 2s .2s;
         .middle_cd {
           @include ab_middle;
           width: 30%;
@@ -191,6 +193,9 @@
         height: calc(50vh - 80px);
         overflow: hidden;
         z-index: 1;
+        canvas{
+          width: 100%;
+        }
         img {
           object-fit: cover;
           width: 100%;
@@ -199,8 +204,20 @@
         }
       }
     }
+    .title_hold{
+      overflow: hidden;
+    }
     .big_title {
       position: relative;
+      animation: title_up 1s .5s backwards;
+      @keyframes title_up {
+        0%{
+          transform: translateY(100%);
+        }
+        100%{
+          transform: translateY(0%);;
+        }
+      }
       h1 {
         font-family: "Open Sans", sans-serif !important;
         font-size: 35px;
@@ -246,9 +263,16 @@
       margin-top: 20px;
       flex-wrap: wrap;
       .hashtag {
-        @include hash;
         margin-right: 10px;
         margin-bottom: 20px;
+        &:nth-child(1){
+          @include hash;
+          animation:  bigger backwards 1s 0.7s;
+        }
+        &:nth-child(2){
+          @include hash;
+          animation:  bigger backwards 1s 1.2s;
+        }
       }
     }
     .right {
@@ -260,6 +284,8 @@
       justify-content: center;
       padding-right: 50px;
       .intro_content {
+        @include fade;
+        animation: fade 2s 1s backwards;
         margin-top: 20px;
         .title {
           margin-bottom: 10px;
@@ -271,12 +297,14 @@
             outline: none;
             border: none;
             background-color: $middle_gray;
-            color: #fff;
             padding: 5px 20px;
             border-radius: 20px;
             cursor: pointer;
             margin-left: 10px;
             cursor: pointer;
+            a{
+              color: #fff;
+            }
             &:hover {
               background-color: #292929;
             }
@@ -290,12 +318,12 @@
   }
   .control_section {
     position: relative;
-    height: 350px;
+    height: 200px;
     .control_img {
       width: 700px;
       position: absolute;
       right: -150px;
-      top: -100px;
+      top: 0px;
       z-index: 2;
     }
   }
@@ -348,6 +376,9 @@
           cursor: pointer;
           font-size: 12px;
           cursor: pointer;
+          a{
+            color: #fff;
+          }
           &:hover {
             background-color: #292929;
           }
@@ -560,9 +591,10 @@
       }
     }
     .control_section {
-      height: 400px;
+      height: 300px;
       .control_img {
-        top: 0px;
+        top: auto;
+        bottom: -300px;
       }
     }
     .about_section {
@@ -771,10 +803,11 @@
           }
         }
         .control_section {
-          height: 400px;
+          height: 200px;
           .control_img {
             width: 550px;
-            top: 0px;
+            top: auto;
+            bottom: -300px;
             right: -200px;
           }
         }

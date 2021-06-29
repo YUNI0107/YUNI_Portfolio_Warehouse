@@ -15,7 +15,7 @@
     </div>
     <router-link :to="`/project_intro/${item.id}`">
         <div class="bottom">
-            <h1>來點熱炒 </h1>
+            <h1>{{ $t(`all_projects.${item.short_name}.name`)  }}</h1>
             <div class="tool_list">
                 <div class="tool" v-for="skill in skill_list" :key="skill">{{ skill }}</div>
             </div>

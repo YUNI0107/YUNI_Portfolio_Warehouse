@@ -1,11 +1,13 @@
 <script>
 import LittleBtn from "@/components/LittleBtn/LittleBtn";
+import FamModal from "@/components/FamModal/FamModal";
 import AboutSwiper from "@/components/AboutSwiper/AboutSwiper";
 import FooterSection from "@/components/FooterSection/FooterSection";
 
 export default {
   data() {
     return {
+      fam_modal: false,
       personality_list: ["Ambition", "Creative", "Enthusiasm", "Improving"],
       skill_list: [
         { name: "vue", text: "Vue" },
@@ -24,11 +26,25 @@ export default {
       ],
     };
   },
+  methods:{
+    toggleModal(tag){
+      this.fam_modal = tag;
+    }
+  },
+  computed:{
+    en_show(){
+      return this.$i18n.locale !== 'en';
+    }
+  },
   components: {
     AboutSwiper,
     FooterSection,
     LittleBtn,
+    FamModal,
   },
+  mounted(){
+    document.title = "About Me - YUNI's PORTFOLIO";
+  }
 };
 </script>
 

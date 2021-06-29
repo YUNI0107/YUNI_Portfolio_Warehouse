@@ -29,7 +29,7 @@ const routes = [
     name: 'project_intro',
     component: ProjectIntro,
     children:[
-        { path: "/project_intro/:id", component: Project },
+        { path: "/project_intro/:id", name: 'project_detial', component: Project },
     ]
   },
 

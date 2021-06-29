@@ -1,0 +1,27 @@
+<div class="about_pic_modal">
+    <div class="content" @click.self="modalClose">
+        <div class="modal">
+            <div class="close" @click="modalClose">
+                <img src="../../assets/Modal/close.png" alt="close" class="w-100">
+            </div>
+            <div class="swiper-container mySwiperModal">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" v-for="(item,index) in 6">
+                        <img :src="require(`../../assets/About/about_${index+1}.jpg`)" alt="about_pic">
+                        <p class="info_text">{{ $t(`about_pic.pic_${index + 1}`) }}</p>
+                    </div>
+                </div>
+                <div class="swiper-button-next toggle_btn" @click="modalClick('+')">
+                    <div class="icon">
+                        <img src="../../assets/ProjectIntro/toggle_icon.png" alt="toggle" class="w-100">
+                    </div>
+                </div>
+                <div class="swiper-button-prev toggle_btn" @click="modalClick('-')">
+                    <div class="icon">
+                        <img src="../../assets/ProjectIntro/toggle_icon.png" alt="toggle" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

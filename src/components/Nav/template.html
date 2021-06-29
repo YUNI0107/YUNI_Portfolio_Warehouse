@@ -1,8 +1,11 @@
 <div class="nav">
-    <div class="fix_part">
+    <transition name="lang">
+        <LangModal v-if="lang_modal" :modal_text="modal_text" />
+    </transition>
+    <div class="fix_part" v-if="location !== 'project_detial'">
         <div class="left">
             <div class="page_info">
-                <div class="nav_icon" v-if="location == ('about' || 'project' || 'home')">
+                <div class="nav_icon" v-if="icon_show">
                     <img class="w-100" :src="require(`../../assets/Nav/${location}_icon.png`)" alt="icon">
                 </div>
                 <p>{{location_text}}</p>
@@ -21,10 +24,11 @@
         </div>
         <div class="top">
             <div class="top_content">
-                <div class="links">
+                <div class="links mail_btn" data-clipboard-text="amy123chou@gmail.com" @click="mailCopyLink">
                     <div class="link_block">
                         <div class="link_img">
                             <img class="w-100" src="../../assets/Nav/mail.png" alt="mail">
+                            <span ref="tool">Copied</span>
                         </div>
                         <p>Mail</p>
                     </div>
@@ -37,10 +41,10 @@
                         </div>
                     </a>
                 </div>
-                <div class="lang">
-                    <p class="en choose">English</p>
+                <div class="lang" @click="changeLang">
+                    <p class="en" :class="{'choose': lang == 'en'}">English</p>
                     <div class="line"></div>
-                    <p class="ch">中文</p>
+                    <p class="ch" :class="{'choose': lang == 'ch'}">中文</p>
                 </div>
             </div>
         </div>
@@ -54,17 +58,17 @@
                         <h2><span>2021. Chou Yun-Huei</span></h2>
                     </div>
                     <div class="links">
-                        <router-link :to="{name: 'home'}" >
+                        <router-link :to="{name: 'home'}">
                             <div class="link_block" @mouseenter="mainPicChange(1)" @click="routeChange(1)">
-                                <p>首頁</p>
+                                <p>{{ $t('nav.home') }}</p>
                                 <div class="icon" :class="{'active': location == 'home'}">
                                     <img src="../../assets/Nav/home_icon.png" class="w-100" alt="home">
                                 </div>
                             </div>
                         </router-link>
-                        <router-link :to="{name: 'project'}" >
+                        <router-link :to="{name: 'project'}">
                             <div class="link_block" @mouseover="mainPicChange(2)" @click="routeChange(2)">
-                                <p>所有專案</p>
+                                <p>{{ $t('nav.all') }}</p>
                                 <div class="icon" :class="{'active': location == 'project'}">
                                     <img src="../../assets/Nav/project_icon.png" class="w-100" alt="project">
                                 </div>
@@ -72,7 +76,7 @@
                         </router-link>
                         <router-link :to="{name: 'about'}">
                             <div class="link_block" @mouseover="mainPicChange(3)" @click="routeChange(3)">
-                                <p>關於我</p>
+                                <p>{{ $t('nav.about') }}</p>
                                 <div class="icon" :class="{'active': location == 'about'}">
                                     <img src="../../assets/Nav/about_icon.png" class="w-100" alt="about">
                                 </div>
@@ -82,12 +86,14 @@
                 </div>
                 <div class="bottom">
                     <div class="lang">
-                        <p>Language : English</p>
+                        <p v-if="lang == 'en'">Language : English</p>
+                        <p v-if="lang == 'ch'">語言 : 中文</p>
                     </div>
                     <div class="contacts">
-                        <div class="contact_block">
+                        <div class="contact_block mail_btn" data-clipboard-text="amy123chou@gmail.com" @click="mailCopyContact">
                             <div class="icon">
                                 <img class="w-100" src="../../assets/Nav/mail.png" alt="mail">
+                                <span ref="tool_c">Copied</span>
                             </div>
                             <p>Mail</p>
                         </div>
@@ -108,13 +114,13 @@
             <div class="second_section" ref="second_section">
                 <div class="second_content">
                     <div class="main_pic">
-                            <img v-show="current_pic == 1" src="../../assets/Nav/home_pic.jpeg">
-                            <img v-show="current_pic == 2" src="../../assets/Nav/project_pic.jpeg">
-                            <img v-show="current_pic == 3" src="../../assets/Nav/about_pic.jpeg">
+                        <img v-show="current_pic == 1" src="../../assets/Nav/home_pic.jpeg">
+                        <img v-show="current_pic == 2" src="../../assets/Nav/project_pic.jpeg">
+                        <img v-show="current_pic == 3" src="../../assets/Nav/about_pic.jpeg">
                     </div>
                     <div class="intro_text">
-                        <h1><span>#1</span>Home</h1>
-                        <p>從首頁可快速了解作者的專業能力與背景，並展現網頁動態的程式能力，由風格展現個人特質。可從首頁挑選有興趣的專案進行瀏覽。</p>
+                        <h1><span>#{{ current_pic }}</span>{{ $t(`nav.${current_pic}_pic`) }}</h1>
+                        <p>{{ $t(`nav.${current_pic}_pic_text`) }}</p>
                     </div>
                 </div>
             </div>

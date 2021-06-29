@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    all_projects: [],
+    all_projects: null,
   },
   mutations: {
     initProject(state){

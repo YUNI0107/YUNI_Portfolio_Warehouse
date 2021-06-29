@@ -2,7 +2,8 @@
 .project{
     .content_section{
         background-color: #fff;
-        padding: 40px 40px;
+        padding: 30px 40px;
+        padding-bottom: 100px;
         min-height: calc(100vh - 100px);
         display: flex;
         .left{
@@ -17,7 +18,7 @@
             .title_section{
                 display: flex;
                 align-items: flex-end;
-                margin-top: 50px;
+                margin-top: 25px;
                 flex-wrap: wrap;
                 .text{
                     margin-right: 30px;
@@ -34,6 +35,9 @@
                         margin-bottom: 5px;
                         h1{
                             font-size: 35px;
+                            &:hover{
+                                opacity: .7;
+                            }
                         }
                     }
                 }
@@ -41,22 +45,26 @@
                     display: flex;
                     align-items: flex-end;
                     flex-wrap: wrap;
+                    position: fixed;
+                    right: 50px;
+                    bottom: 50px;
                     .web_link{
                         display: flex;
                         margin-top: 10px;
-                        height: 40px;
+                        height: 60px;
                         align-items: center;
                         background-color: $back_gray;
                         border: solid 1px rgb(222, 222, 222);
                         box-shadow: inset 1px 1px 5px #fff,inset -2px -2px 5px rgba(206, 206, 206, 0.164), 0px 2px 5px rgb(225, 225, 225);
-                        padding: 10px 20px;
+                        padding: 10px 50px;
                         border-radius: 50px;
                         &:hover{
                             background-color: #eeeeee;
                         }
                         p{
                             margin-right: 8px;
-                            font-size: 16px;
+                            font-size: 20px;
+                            font-weight: bolder;
                         }
                         .icon{
                             height: 18px;
@@ -69,9 +77,9 @@
                         border: solid 1px rgb(222, 222, 222);
                         box-shadow: inset 1px 1px 5px #fff,inset -2px -2px 5px rgba(206, 206, 206, 0.164), 0px 2px 5px rgb(225, 225, 225);
                         border-radius: 50%;
-                        width: 40px;
-                        height: 40px;
-                        padding: 5px;
+                        width: 60px;
+                        height: 60px;
+                        padding: 10px;
                         &:hover{
                             background-color: #eeeeee;
                         }
@@ -144,6 +152,7 @@
                     .icon{
                         margin-right: 20px;
                         width: 80px;
+                        min-width: 80px;
                     }
                 }
             }
@@ -195,6 +204,24 @@
                             h1{
                                 font-size: 30px;
                             }
+                        }
+                    }
+                    .links_section{
+                        position: relative;
+                        bottom: auto;
+                        right: auto;
+                        .web_link{
+                            height: 40px;
+                            padding: 10px 20px;
+                            p{
+                                font-size: 16px;
+                                font-weight: normal;
+                            }
+                        }
+                        .github_link{
+                            width: 40px;
+                            height: 40px;
+                            padding: 5px;
                         }
                     }
                 }

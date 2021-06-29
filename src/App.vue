@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <Nav />
-    <router-view />
+    <Nav/>
+    <transition name="fadepage" mode="out-in">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -11,6 +13,9 @@ export default {
   components: {
     Nav,
   },
+  mounted(){
+    console.log("%c YUNI's Portfolio 👩‍💻"+'%c \nHello, welcome to my Portfolio 👋'+'%c\n歡迎前往Github頁面查看作品集的原始碼\nhttps://github.com/YUNI0107/YUNI_Portfolio_Warehouse','background: #222; color: #5af5f5; padding: 5px 10px; margin-bottom: 5px;',"color:#18d7d7; margin-bottom: 5px;", "color: #222;");
+  }
 };
 </script>
 
@@ -52,10 +57,29 @@ p {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
 }
 .fade-enter,
 .fade-leave-to {
+  opacity: 0;
+}
+
+
+.fadepage-enter-active {
+  transition: all 1s;
+}
+
+.fadepage-leave-active {
+  transition: all 0.5s;
+}
+
+.fadepage-enter{
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.fadepage-leave-to {
+  transform: translateY(20px);
   opacity: 0;
 }
 

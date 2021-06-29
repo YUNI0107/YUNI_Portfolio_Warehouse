@@ -1,5 +1,7 @@
 <script>
 import gsap from "gsap";
+import * as Clipboard from 'clipboard';
+import LangModal from "@/components/LangModal/LangModal";
 
 export default {
   data() {
@@ -7,6 +9,8 @@ export default {
       current_pic: 1,
       tl: null,
       nav_open: false,
+      lang_modal: false,
+      modal_text: ["English", "Language"],
     };
   },
   computed: {
@@ -20,6 +24,19 @@ export default {
         ? "About"
         : "Project";
     },
+    icon_show() {
+      let show =
+        this.location == "about" ||
+        this.location == "project" ||
+        this.location == "home";
+      return show;
+    },
+    lang() {
+      return this.$i18n.locale;
+    },
+  },
+  components: {
+    LangModal,
   },
   methods: {
     toggleNav() {
@@ -36,9 +53,49 @@ export default {
     routeChange(num) {
       this.mainPicChange(num);
       this.nav_open = false;
-      this.tl.reverse();
+      // this.tl.reverse();
+      this.tl.progress(0); 
+      this.tl.pause(); 
+    },
+    changeLang() {
+      this.modal_text =
+        this.lang == "ch" ? ["English", "Language"] : ["中文", "切換語言"];
+      this.lang_modal = true;
+      setTimeout(() => {
+        this.lang_modal = false;
+      }, 1000);
+
+      let c_lang = this.lang == "en" ? "ch" : "en";
+      setTimeout(() => {
+        this.$root.$i18n.locale = c_lang;
+      }, 500);
+    },
+    mailCopyLink(){
+      this.$refs.tool.style.opacity = 1;
+      let timer = setTimeout(()=>{
+       this.$refs.tool.style.transition = .5 + 's';
+        this.$refs.tool.style.opacity = 0;
+        let in_timer = setTimeout(()=>{
+          this.$refs.tool.style.transition = 0 + 's';
+          clearTimeout(timer);
+          clearTimeout(in_timer);
+        },500)
+      },500)
+    },
+    mailCopyContact(){
+      this.$refs.tool_c.style.opacity = 1;
+      let timer = setTimeout(()=>{
+       this.$refs.tool_c.style.transition = .5 + 's';
+        this.$refs.tool_c.style.opacity = 0;
+        let in_timer = setTimeout(()=>{
+          this.$refs.tool_c.style.transition = 0 + 's';
+          clearTimeout(timer);
+          clearTimeout(in_timer);
+        },500)
+      },500)
     },
   },
+  watch: {},
   mounted() {
     this.tl = gsap.timeline({
       paused: true,
@@ -87,9 +144,16 @@ export default {
         "-=0.3"
       );
 
-    this.$refs.middle_part.style.transition = 0.5;
-    this.$refs.second_section.style.transition = 0.5;
+    this.$refs.middle_part.style.transition = 0;
+    this.$refs.second_section.style.transition = 0;
+
+    this.$nextTick(()=>{
+      new Clipboard('.mail_btn');
+    })
   },
+  destroyed(){
+    this.tl.clear();
+  }
 };
 </script>
 <template src="./template.html"></template>

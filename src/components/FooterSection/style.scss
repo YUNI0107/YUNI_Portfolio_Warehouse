@@ -94,6 +94,12 @@
     }
 }
 
+@media (max-width: 992px){
+    .footer_section{
+        background-attachment: scroll;
+    }
+}
+
 @media (max-width: 768px){
     .footer_section{
         height: 300px;

@@ -8,8 +8,8 @@ import axios from "axios";
 import Rellax from "rellax";
 import * as PIXI from "pixi.js";
 
-import back_img from "../../assets/Home/back_water.jpg"
-import ripple_img from "../../assets/Home/ripple.png"
+import back_img from "../../assets/Home/back_water.jpg";
+import ripple_img from "../../assets/Home/ripple.png";
 
 export default {
   name: "Home",
@@ -31,11 +31,38 @@ export default {
       rellax: null,
       app: null,
       posX: 0,
+      // time
+      timer: null,
+      day: null,
+      hour: 0,
+      min: 0,
+      sec: 0,
     };
   },
   computed: {
     en_show() {
       return false;
+    },
+    hour_text(){
+      if(this.hour < 10){
+        return '0' + this.hour;
+      }else{
+        return this.hour;
+      }
+    },
+    min_text(){
+      if(this.min < 10){
+        return '0' + this.min;
+      }else{
+        return this.min;
+      }
+    },
+    sec_text(){
+      if(this.sec < 10){
+        return '0' + this.sec;
+      }else{
+        return this.sec;
+      }
     },
   },
   components: {
@@ -43,6 +70,14 @@ export default {
     LittleBtn,
     HomeSwiper,
     FooterSection,
+  },
+  methods: {
+    getTime() {
+      this.day = new Date();
+      this.hour = this.day.getHours();
+      this.min = this.day.getMinutes();
+      this.sec = this.day.getSeconds();
+    },
   },
   mounted() {
     document.title = "Home - YUNI's PORTFOLIO";
@@ -71,8 +106,8 @@ export default {
     let container = new PIXI.Container();
     this.app.stage.addChild(container);
     this.app.loader
-      .add('back',back_img)
-      .add('ripple',ripple_img)
+      .add("back", back_img)
+      .add("ripple", ripple_img)
       .load(setup);
 
     let v_this = this;
@@ -90,7 +125,6 @@ export default {
       displacementSprite.y = v_this.app.renderer.height / 2;
       vx = displacementSprite.x;
 
-
       // 加上濾鏡
       v_this.app.stage.addChild(displacementSprite);
       container.filters = [displacementFilter];
@@ -98,9 +132,7 @@ export default {
       displacementFilter.scale.y = 0;
 
       // 加上背景
-      bg = new PIXI.Sprite(
-        v_this.app.loader.resources.back.texture
-      );
+      bg = new PIXI.Sprite(v_this.app.loader.resources.back.texture);
       bg.width = v_this.app.renderer.width;
       bg.height = v_this.app.renderer.height;
       container.addChild(bg);
@@ -131,11 +163,17 @@ export default {
         ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
       return newval;
     }
+
+    // time
+    this.timer = setInterval(()=>{
+      this.getTime();
+    },1000)
   },
-  beforeDestroy(){
+  beforeDestroy() {
+    clearInterval(this.timer)
     this.app.destroy();
     PIXI.utils.clearTextureCache();
-  }
+  },
 };
 </script>
 

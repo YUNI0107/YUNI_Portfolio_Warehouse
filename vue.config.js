@@ -7,5 +7,4 @@ module.exports = {
       enableInSFC: false
     }
   },
-  filenameHashing: false,
 }

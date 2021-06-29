@@ -90,6 +90,7 @@ p {
 
   .mobile_none {
     display: none;
+    
   }
 }
 </style>

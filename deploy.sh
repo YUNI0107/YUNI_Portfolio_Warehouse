@@ -17,7 +17,6 @@ git add -A
 git commit -m 'deploy'
 
 
-
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:YUNI0107/YUNI_Portfolio_Warehouse.git main:gh-pages
 

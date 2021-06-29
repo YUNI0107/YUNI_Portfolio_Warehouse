@@ -7,7 +7,5 @@ module.exports = {
       enableInSFC: false
     }
   },
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/YUNI_Portfolio_Warehouse/'
-    : '/'
+  filenameHashing: false,
 }

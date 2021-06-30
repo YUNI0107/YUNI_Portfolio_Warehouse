@@ -68,15 +68,38 @@
                 align-items: center;
                 margin: 0 15px;
                 .info_icon{
+                    position: relative;
                     cursor: pointer;
                     width: 30px;
                     margin-right: 10px;
                     transition: .5s;
+                    span{
+                        opacity: 0;
+                        position: absolute;
+                        bottom: -40px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-color: #fff;
+                        color: #222;
+                        padding: 5px 10px;
+                        border-radius: 20px;
+                        &::before{
+                          content: "";
+                          display: block;
+                          width: 0;
+                          height: 0;
+                          border: solid 8px;
+                          border-color: transparent transparent #fff transparent;
+                          position: absolute;
+                          top: -15px;
+                          left: 50%;
+                          transform: translateX(-50%);
+                        }
+                      }
                 }
                 &:hover{
                     .info_icon{
                         transform: scale(1.1);
-                        opacity: 0.8;
                     }
                 }
             }

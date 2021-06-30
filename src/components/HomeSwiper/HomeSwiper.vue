@@ -2,9 +2,9 @@
 import HomeProjectBox from "../../components/HomeProjectBox/HomeProjectBox";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
-import SwiperCore, { Navigation, Pagination } from "swiper/core";
+import SwiperCore, { Navigation } from "swiper/core";
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation]);
 
 export default {
   props: ["project"],
@@ -24,10 +24,6 @@ export default {
             slidesPerView: 1,
             spaceBetween: 10,
             loop: false,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",

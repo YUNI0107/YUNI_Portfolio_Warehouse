@@ -455,6 +455,9 @@
     overflow-x: hidden;
     .title {
       margin-top: 50px;
+      .right{
+        display: none;
+      }
       h1 {
         display: inline-block;
         margin-right: 20px;
@@ -700,7 +703,27 @@
     }
     .project_section {
         .title {
+          position: relative;
           margin-top: 45px;
+          .right{
+            position: absolute;
+            width: 30px;
+            right: 0;
+            top: -50px;
+            z-index: 50;
+            animation: right_ani 1.5s infinite;
+            @keyframes right_ani {
+              0%{
+                transform: translateX(-15px);
+              }
+              50%{
+                transform: translateX(0px);
+              }
+              100%{
+                transform: translateX(-15px);
+              }
+            }
+          }
           h1 {
             display: inline-block;
             margin-right: 0px;
@@ -883,6 +906,9 @@
           padding: 100px 15px;
             .title {
               margin-top: 30px;
+              .right{
+                display: block;
+              }
               h1 {
                 font-size: 25px;
               }
